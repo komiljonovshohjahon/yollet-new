@@ -1,0 +1,73 @@
+span {
+  display: block;
+}
+
+.gray-text {
+  color: #6b7280;
+}
+
+.head-gray {
+  color: #374151;
+}
+
+/* Navbar */
+#nav-li {
+  color: #4b5563;
+  font-weight: bold;
+}
+.yellow-li {
+  color: #f97316;
+}
+.blackish {
+  color: #1f2937;
+}
+/* Navbar */
+
+/* Homepage */
+#homepage h1 {
+  /* background-image: url("../assets/bg/dots.png");
+  background-size: cover; */
+  color: #111827;
+}
+
+/* Homepage */
+
+/* About */
+#about {
+  background-image: url("../assets/bg/about.png");
+  background-size: cover;
+}
+/* About */
+
+/* Blockchain */
+#blockchain {
+  background-color: #fff7ed;
+}
+/* Blockchain */
+
+/* Payment */
+#payment {
+  background-color: #eff6ff;
+}
+/* Payment */
+
+/* Service */
+#service {
+  background-color: #fafafa;
+}
+#service-table h1 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+#service-table p {
+  font-weight: 500;
+  color: #1f2937;
+}
+/* Service */
+
+/* FAQ */
+.faq-li {
+  /* padding: 10px 15px; */
+  background-color: #374151;
+}
+/* FAQ */
