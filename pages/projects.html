@@ -26,7 +26,7 @@
             <div class="text-gray-700 dark-mode:text-gray-200 dark-mode:bg-gray-800 px-4 sm:px-10 lg:px-20">
                 <div x-data="{ open: false }" class="flex flex-col mx-auto lg:items-center lg:flex-row">
                     <div class="flex flex-row items-center justify-between">
-                        <a href="#"
+                        <a href="./index.html"
                             class="text-lg font-semibold tracking-widest text-gray-900 rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline md:mr-4"><img
                                 src="../assets/logos/Logo.png" /></a>
                         <button class="lg:hidden rounded-lg focus:outline-none focus:shadow-outline"
@@ -44,11 +44,11 @@
                     <nav :class="{'flex': open, 'hidden': !open}"
                         class="flex-col flex-grow pb-4 md:pb-0 hidden lg:flex lg:justify-end lg:flex-row font-bold">
                         <a class="px-4 py-2 mt-2 text-sm font-semibold  rounded-lg dark-mode:bg-gray-700 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-                            href="#">Home</a>
+                            href="./index.html">Home</a>
                         <a class="text-gray-900 bg-gray-200 px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                             href="#">Projects</a>
                         <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-                            href="#">Solutions</a>
+                            href="./solutions.html">Solutions</a>
                         <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                             href="#">Contact Us</a>
                         <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
@@ -68,14 +68,13 @@
 
     <!-- Home -->
     <div class="bg-blue-50 bg-right lg:mt-16 pt-12 lg:pt-0">
-        <section
+        <section style="font-family: 'Poppins';"
             class="flex justify-center flex-col items-center py-12 lg:pt-28 lg:px-0 text-center container mx-auto px-0  lg:pb-28 ">
             <div class="flex flex-col items-center w-full">
                 <h1 class="font-bold text-4xl lg:text-6xl">
-                    About Yollet
+                    Our Projects
                 </h1>
-                <p style="font-family: 'Nanum Gothic'"
-                    class="text-lg lg:text-xl md:text-lg px-10 tracking-wide lg:w-1/2 my-8">
+                <p class="text-lg lg:text-xl md:text-lg px-10 tracking-wide lg:w-1/2 my-8">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus quam explicabo corporis corrupti
                     minima illum officiis? Quae quisquam quis nulla quo in, quia laborum, aliquid aspernatur voluptas
                     veniam harum quasi.
@@ -88,8 +87,8 @@
     <!-- Projects -->
     <div class="flex flex-col  py-12 lg:py-24">
         <div class="text-white text-center space-y-8 px-10 lg:px-28 py-2 flex flex-col w-full">
-            <div class="flex flex-col items-center lg:mb-8">
-                <div class=" tetx-lg gray-text">
+            <div class="flex flex-col items-center lg:mb-8" style="font-family: 'Poppins'">
+                <div class="text-lg gray-text">
                     <p>Our projects</p>
                 </div>
                 <div>
@@ -98,8 +97,8 @@
                     </h1>
                 </div>
             </div>
-            <div class="flex flex-col lg:flex-row w-full text-black space-y-8 lg:container lg;mx-auto">
-                <div class="w-full lg:flex">
+            <div class="flex flex-col lg:flex-row w-full text-black space-y-8 lg:container lg:mx-auto">
+                <div class="w-full lg:flex justify-center">
                     <img src="../assets/images/projects.png" alt="" />
                 </div>
                 <div class="w-full flex flex-col text-left space-y-4">
@@ -111,7 +110,8 @@
                     </p>
                     <button
                         class="border border-gray-300 text-base py-2  rounded-md bg-white mt-8 mb-4 mb-16 focus:outline-none focus:border-gray-400 text-sm hover:bg-gray-100 focus:outline-none lg:w-1/3 flex font-bold items-center space-x-4 justify-center">
-                        <p>www.vixco.net</p><i class="fas fa-external-link-alt text-xs"></i>
+                        <a href="http://vixco.net" target="_blank">www.vixco.net</a><i
+                            class="fas fa-external-link-alt text-xs"></i>
                     </button>
                 </div>
             </div>
@@ -120,19 +120,19 @@
     <!-- Projects -->
 
     <!-- Solutions -->
-    <div class="flex flex-col items-center py-12 lg:py-24 border-b">
+    <div class="flex flex-col items-center py-12 lg:py-24 lg:mx-20 border-b">
         <div>
             <div class="text-white space-y-8 px-10 lg:px-28 flex flex-col">
                 <div class="lg:mb-6">
                     <div>
-                        <h1 class="text-xl lg:text-2xl font-bold inn-head">
+                        <h1 style="font-family: 'Poppins';" class="text-xl lg:text-2xl font-bold inn-head">
                             적용 Solutions
                         </h1>
                     </div>
                 </div>
-                <div class="lg:flex space-y-6 lg:space-y-0 lg:space-x-4">
+                <div class="space-y-4 lg:lg:flex space-y-6 lg:space-y-0 space-x-0 lg:space-x-6 lg:grid lg:grid-cols-3">
                     <div class="border p-6 lg:px-8 lg:py-6 rounded-lg space-y-4 flex-1">
-                        <h1 class="font-bold text-xl">Yollet Network</h1>
+                        <h1 style="font-family: 'Poppins';" class="font-bold text-xl">Yollet Network</h1>
                         <p class="text-left text-sm lg:text-base" style="font-family: 'Nanum Gothic'">빠른 송금 및 결제 서비스를
                             제공하기
                             위해 블록체인 네트워크로 Yollet Network 적용.
@@ -140,22 +140,23 @@
                             사용자에게 결제 및 송금 서비스를 제공. </p>
                     </div>
                     <div class="border p-6 lg:px-8 lg:py-6 rounded-lg space-y-4  flex-1">
-                        <h1 class="font-bold text-xl">Yollet Wallet</h1>
+                        <h1 class="font-bold text-xl" style="font-family: 'Poppins';">Yollet Wallet</h1>
                         <p class="text-left text-sm lg:text-base" style="font-family: 'Nanum Gothic'">소비자가 실생활에서 VIXCO
                             플랫폼을
                             이용할 수 있도록 Yollet Wallet을 적용. 사용자는 Yollet Wallet을 이용해 VIXCO의 결제, Reward, 송금 서비스를 손쉽게 사용. </p>
                     </div>
                     <div class="border p-6 lg:px-8 lg:py-6 rounded-lg space-y-4  flex-1">
-                        <h1 class="font-bold text-xl">Yoshop POS</h1>
+                        <h1 class="font-bold text-xl" style="font-family: 'Poppins';">Yoshop POS</h1>
                         <p class="text-left text-sm lg:text-base" style="font-family: 'Nanum Gothic'">VIXCO Project의
                             오프라인
                             가맹점용으로 Yoshop POS를 적용.
                             YoshopPOS에 Payment를 연결하여 사용자와 가맹점을 통합하는 ECO환경을 제공 </p>
                     </div>
                 </div>
-                <div class="">
+                <div
+                    class="space-y-4 space-x-0 lg:space-x-6 lg:lg:flex space-y-6 lg:space-y-0 lg:space-x-0 lg:grid lg:grid-cols-3">
                     <div class="border p-6 lg:px-8 lg:py-6 rounded-lg space-y-4 ">
-                        <h1 class="font-bold text-xl">Yollet Payment</h1>
+                        <h1 class="font-bold text-xl" style="font-family: 'Poppins';">Yollet Payment</h1>
                         <p class="text-left text-sm lg:text-base" style="font-family: 'Nanum Gothic'">VIXCO Pay를 구성하기위한
                             결제
                             시스템으로 Yollet Payment를 적용함. Yollet Payment는 VIXCO Pay의 승인, 취소, Reward, 정산 기능을 제공하고, 이를 이용해
@@ -170,7 +171,7 @@
     <!-- Solutions -->
 
     <!-- FOOTER -->
-    <footer class="px-10 py-8 lg:py-16 lg:px-8 flex flex-col lg:flex-row lg:container lg:mx-auto lg:justify-between">
+    <footer class=" px-10 py-8 lg:py-16 lg:px-36 flex flex-col lg:flex-row lg:container lg:mx-auto lg:justify-between">
         <div class="w-full lg:w-1/3 space-y-3 lg:space-y-4">
             <img src="../assets/logos/footer-logo.png" alt="" />
             <p>Make radically better things</p>
