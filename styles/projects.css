@@ -102,7 +102,7 @@ form button {
 }
 
 .brochure {
-    background-image: url("./assets/bg/background.png");
+    background-image: url("../assets/bg/background.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
@@ -110,7 +110,7 @@ form button {
 }
 
 .about {
-    background-image: url("./assets/bg/about.png");
+    background-image: url("../assets/bg/about.png");
     background-size: cover;
     background-repeat: no-repeat;
     /* background-position: center; */
