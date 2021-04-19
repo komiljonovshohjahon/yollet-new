@@ -1,283 +1,381 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Poppins:wght@400;500;700&family=Rubik:wght@400;500;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Poppins:wght@400;500;700&family=Rubik:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="../styles/tailwind.css" />
     <link rel="stylesheet" href="../styles/projects.css" />
-    <link rel="shortcut icon" href="../assets/logos/favicon.png" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="../assets/logos/favicon.png"
+      type="image/x-icon"
+    />
     <title>Yollet</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- NAVBAR -->
     <!-- NAVBAR DROPDOWN -->
-    <div class="bg-white sticky top-0 z-10">
-        <div class="lg:px-10 lg:container lg:mx-auto">
-            <div class="text-gray-700 dark-mode:text-gray-200 dark-mode:bg-gray-800 px-4 sm:px-10 lg:px-20">
-                <div x-data="{ open: false }" class="flex flex-col mx-auto lg:items-center lg:flex-row">
-                    <div class="flex flex-row items-center justify-between">
-                        <a href="./index.html"
-                            class="text-lg font-semibold tracking-widest text-gray-900 rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline md:mr-4"><img
-                                src="../assets/logos/Logo.png" /></a>
-                        <button class="lg:hidden rounded-lg focus:outline-none focus:shadow-outline"
-                            @click="open = !open">
-                            <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
-                                <path x-show="!open" fill-rule="evenodd"
-                                    d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
-                                    clip-rule="evenodd"></path>
-                                <path x-show="open" fill-rule="evenodd"
-                                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                                    clip-rule="evenodd"></path>
-                            </svg>
-                        </button>
-                    </div>
-                    <nav :class="{'flex': open, 'hidden': !open}"
-                        class="flex-col flex-grow pb-4 md:pb-0 hidden lg:flex lg:justify-end lg:flex-row font-bold">
-                        <a class="px-4 py-2 mt-2 text-sm font-semibold  rounded-lg dark-mode:bg-gray-700 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-                            href="./index.html">Home</a>
-                        <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-                            href="./projects.html">Projects</a>
-                        <a class=" text-gray-900 bg-gray-200 px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-                            href="./solutions.html">Solutions</a>
-                        <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-                            href="#">Contact Us</a>
-                        <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-                            href="http://www.yollet.net/doc/block-api-reference.html">Resource</a>
-                        <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline text-orange"
-                            href="https://yollet-scan.vercel.app/" target="_blank">Yollet Scan</a>
-                        <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline text-orange"
-                            href="#">Yollet Service</a>
-                        <div @click.away="open = false" class="relative" x-data="{ open: false }"></div>
-                    </nav>
-                </div>
+    <div class="bg-white sticky top-0 z-10 py-4">
+      <div class="lg:px-10 lg:container lg:mx-auto">
+        <div
+          class="text-gray-700 dark-mode:text-gray-200 dark-mode:bg-gray-800 px-4 sm:px-10 lg:px-20"
+        >
+          <div
+            x-data="{ open: false }"
+            class="flex flex-col mx-auto lg:items-center lg:flex-row"
+          >
+            <div class="flex flex-row items-center justify-between">
+              <a
+                href="./index.html"
+                class="text-lg font-semibold tracking-widest text-gray-900 rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline md:mr-4"
+                ><img src="../assets/logos/Logo.png"
+              /></a>
+              <button
+                class="lg:hidden rounded-lg focus:outline-none focus:shadow-outline"
+                @click="open = !open"
+              >
+                <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+                  <path
+                    x-show="!open"
+                    fill-rule="evenodd"
+                    d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+                    clip-rule="evenodd"
+                  ></path>
+                  <path
+                    x-show="open"
+                    fill-rule="evenodd"
+                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </button>
             </div>
+            <nav
+              :class="{'flex': open, 'hidden': !open}"
+              class="flex-col flex-grow pb-4 md:pb-0 hidden lg:flex lg:justify-end lg:flex-row font-bold"
+            >
+              <a
+                class="px-4 py-2 mt-2 text-sm font-semibold rounded-lg dark-mode:bg-gray-700 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                href="./index.html"
+                >Home</a
+              >
+              <a
+                class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                href="./projects.html"
+                >Projects</a
+              >
+              <a
+                class="text-gray-900 bg-gray-200 px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                href="./solutions.html"
+                >Solutions</a
+              >
+              <a
+                class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                href="#"
+                >Contact Us</a
+              >
+              <a
+                class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                href="http://www.yollet.net/doc/block-api-reference.html"
+                >Resource</a
+              >
+              <a
+                class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline text-orange"
+                href="https://yollet-scan.vercel.app/"
+                target="_blank"
+                >Yollet Scan</a
+              >
+              <a
+                class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline text-orange"
+                href="#"
+                >Yollet Service</a
+              >
+              <div
+                @click.away="open = false"
+                class="relative"
+                x-data="{ open: false }"
+              ></div>
+            </nav>
+          </div>
         </div>
+      </div>
     </div>
 
     <!-- NAVBAR -->
 
     <!-- Home -->
-    <div class="bg-blue-50 bg-right lg:mt-16 pt-12 lg:pt-0 ">
-        <section
-            class="flex justify-center flex-col items-center py-12 lg:pt-28 lg:px-0 text-center container mx-auto px-0  lg:pb-28 lg:container lg:mx-auto">
-            <div class="flex flex-col items-center w-full">
-                <h1 class="font-bold text-4xl lg:text-5xl" style="font-family: 'Poppins';">
-                    Solutions
-                </h1>
-                <p style="font-family: 'Nanum Gothic'"
-                    class="text-xs lg:text-lg md:text-lg px-10 font-medium tracking-wide leading-5 lg: lg:w-2/3 my-8">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus quam explicabo corporis corrupti
-                    minima illum officiis? Quae quisquam quis nulla quo in, quia laborum, aliquid aspernatur voluptas
-                    veniam harum quasi.
-                </p>
-            </div>
-        </section>
+    <div class="bg-blue-50 bg-right lg:mt-16 pt-12 lg:pt-0">
+      <section
+        class="flex justify-center flex-col items-center py-12 lg:pt-28 lg:px-0 text-center container mx-auto px-0 lg:pb-28 lg:container lg:mx-auto"
+      >
+        <div class="flex flex-col items-center w-full">
+          <h1
+            class="font-bold text-4xl lg:text-5xl"
+            style="font-family: 'Poppins'"
+          >
+            Solutions
+          </h1>
+          <p
+            style="font-family: 'Nanum Gothic'"
+            class="text-base lg:text-lg md:text-lg px-10 font-medium tracking-wide leading-5 lg: lg:w-2/3 my-8"
+          >
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus
+            quam explicabo corporis corrupti minima illum officiis? Quae
+            quisquam quis nulla quo in, quia laborum, aliquid aspernatur
+            voluptas veniam harum quasi.
+          </p>
+        </div>
+      </section>
     </div>
     <!-- Home -->
-
-
 
     <!-- Solutions -->
     <div class="lg:mx-40">
-        <section
-            class="flex justify-center flex-col items-center py-12 lg:pt-28 lg:px-0 text-center container mx-auto  lg:pb-28 ">
-            <div class="flex flex-col items-center w-full">
-                <h1 class="font-bold text-2xl lg:text-4xl lg:text" style="font-family: 'Poppins';">
-                    Payment Solutions <br class="lg:hidden" /> for Your Business </h1>
-                <p style="font-family: 'Nanum Gothic'"
-                    class="text-md lg:text-xl md:text-lg tracking-wide lg:w-1/2 my-8 leading-5">
-                    Yollet 솔루션을 이용해 사업자, 상점, 소비자를 통합하는 서비스를 제공할 수 있
-                    습니다. Yollet 솔루션은 온라인과 오프라인을 통합하고 다양한 사용자를 연결하는
-                    독창적인 비즈니스 아이디어를 실현할 수 있도록 제공합니다.
-                </p>
-            </div>
-            <!-- <img src="./assets/images/section2.png" alt="" /> -->
-        </section>
+      <section
+        class="flex justify-center flex-col items-center py-12 lg:pt-28 lg:px-0 text-center container mx-auto lg:pb-28"
+      >
+        <div class="flex flex-col items-center w-full">
+          <h1
+            class="font-bold text-2xl lg:text-4xl lg:text"
+            style="font-family: 'Poppins'"
+          >
+            Payment Solutions <br class="lg:hidden" />
+            for Your Business
+          </h1>
+          <p
+            style="font-family: 'Nanum Gothic'"
+            class="text-md lg:text-base md:text-lg tracking-wide font-medium lg:w-1/2 my-8 leading-6"
+          >
+            Yollet 솔루션을 이용해 사업자, 상점, 소비자를 통합하는 서비스를
+            제공할 수 있 습니다. Yollet 솔루션은 온라인과 오프라인을 통합하고
+            다양한 사용자를 연결하는 독창적인 비즈니스 아이디어를 실현할 수
+            있도록 제공합니다.
+          </p>
+        </div>
+        <!-- <img src="./assets/images/section2.png" alt="" /> -->
+      </section>
     </div>
     <!-- Solutions -->
 
     <!-- PaymentsImage -->
     <div class="bg-blue-50">
-        <section class="flex justify-center flex-col items-center text-center container mx-auto ">
-            <img src="../assets/images/payment-solutions.png" alt="">
-        </section>
+      <section
+        class="flex justify-center flex-col items-center text-center container mx-auto"
+      >
+        <img src="../assets/images/payment-solutions.png" alt="" />
+      </section>
     </div>
     <!-- PaymentsImage -->
 
     <!-- PaymentText -->
     <div class="lg:mx-40 py-10">
-        <section class="py-12 lg:py-20">
-            <div class="mb-6 text-lg lg:text-2xl font-bold" style="font-family: 'Poppins';">
-                <h1>Yollet Payment</h1>
+      <section class="py-12 lg:py-20">
+        <div
+          class="mb-6 text-xl lg:text-2xl font-bold"
+          style="font-family: 'Poppins'"
+        >
+          <h1>Yollet Payment</h1>
+        </div>
+        <div
+          class="lg:grid lg:grid-cols-2 lg:space-x-8 space-y-4 lg:space-y-0"
+          style="font-family: 'Nanum Gothic'"
+        >
+          <div class="leading-7">
+            <div class="space-y-4 w-full lg:grid lg:grid-rows-2">
+              <p class="">
+                - 신용카드 등 전통적인 결제수단부터, 간편 결제, 토큰 결제 등
+                최신 결제 수단 등 다양한 결제수단을 지원합니다.
+              </p>
+              <p>
+                - 승인, 리워드, 정산 등 전체적인 결제 시스템에 고유한 비즈니스
+                규칙 적용하여 차별화된 서비스 제공할 수 있습니다.
+              </p>
             </div>
-            <div class="lg:grid lg:grid-cols-2 lg:space-x-8 space-y-4 lg:space-y-0"
-                style="font-family: 'Nanum Gothic';">
-                <div class="">
-                    <div class="space-y-4 w-full lg:grid lg:grid-rows-2">
-                        <p class="">- 신용카드 등 전통적인 결제수단부터, 간편 결제, 토큰 결제 등 최신 결제 수단 등 다양한 결제수단을 지원합니다.
-                        </p>
-                        <p>- 승인, 리워드, 정산 등 전체적인 결제 시스템에 고유한 비즈니스 규칙 적용하여 차별화된 서비스 제공할 수 있습니다.
-                        </p>
-                    </div>
-                </div>
-                <div class="">
-                    <div class="space-y-4 w-full lg:grid lg:grid-rows-2">
-                        <p>-Cloud 기반의 결제 시스템으로 독립적인 초기비용을 최소화 하여 구성할 수 있습니다.
-
-                        </p>
-                        <p>- Yollet Network와 연동해 ERC20 스펙의 토큰을 이용한 지불/결제 서비스를 제공할 수 있습니다.
-                        </p>
-                    </div>
-                </div>
+          </div>
+          <div class="leading-7">
+            <div class="space-y-4 w-full lg:grid lg:grid-rows-2">
+              <p>
+                -Cloud 기반의 결제 시스템으로 독립적인 초기비용을 최소화 하여
+                구성할 수 있습니다.
+              </p>
+              <p>
+                - Yollet Network와 연동해 ERC20 스펙의 토큰을 이용한 지불/결제
+                서비스를 제공할 수 있습니다.
+              </p>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
     </div>
     <!-- PaymentText -->
 
-
-
     <!-- Network -->
     <div class="bg-blue-50">
-        <section class="flex justify-center flex-col items-center text-center container mx-auto ">
-            <img src="../assets/images/payments-network.png" alt="">
-        </section>
+      <section
+        class="flex justify-center flex-col items-center text-center container mx-auto"
+      >
+        <img src="../assets/images/payments-network.png" alt="" />
+      </section>
     </div>
     <!-- Network -->
 
     <!-- Networktext -->
     <div class="lg:mx-40 py-10">
-        <section class="py-12 lg:py-20">
-            <div class="mb-6 text-lg lg:text-2xl font-bold">
-                <h1>Yollet Network</h1>
+      <section class="py-12 lg:py-20">
+        <div class="mb-6 text-xl lg:text-2xl font-bold">
+          <h1>Yollet Network</h1>
+        </div>
+        <div
+          class="lg:grid lg:grid-cols-2 lg:space-x-8 space-y-4 lg:space-y-0"
+          style="font-family: 'Nanum Gothic'"
+        >
+          <div class="">
+            <div class="space-y-4 w-full lg:grid lg:grid-rows-2">
+              <p class="leading-7">
+                - HyperLedger Fabic을 기반으로 결제 처리에 최적화 하여 개발한
+                블록체인 솔루션으로 빠른 처리 속도와 신뢰성를 확보하고 있습니다.
+                거래 승인은 프라이빗하게 처리되어 빠른 승인 속도를 확보하고,
+                거래내역을 모두 다 공유하여 신뢰성을 보장합니다
+              </p>
+              <p>
+                - 어려운 기술 지식에 대한 학습 없이 사용할 수 있는 전용
+                관리도구를 제공해 당신만의 독립적인 Eco System을 구성할 수
+                있습니다.
+              </p>
             </div>
-           <div class="lg:grid lg:grid-cols-2 lg:space-x-8 space-y-4 lg:space-y-0"
-                style="font-family: 'Nanum Gothic';">
-                <div class="">
-                    <div class="space-y-4 w-full lg:grid lg:grid-rows-2">
-                        <p class="">- HyperLedger Fabic을 기반으로 결제 처리에 최적화 하여 개발한 블록체인 솔루션으로 빠른 처리 속도와 신뢰성를 확보하고 있습니다. 거래 승인은 프라이빗하게 처리되어 빠른 승인 속도를 확보하고, 거래내역을 모두 다 공유하여 신뢰성을 보장합니다
-                        </p>
-                        <p>- 어려운 기술 지식에 대한 학습 없이 사용할 수 있는 전용 관리도구를 제공해 당신만의 독립적인 Eco System을 구성할 수 있습니다.
-
-
-                        </p>
-                    </div>
-                </div>
-                <div class="">
-                    <div class="space-y-4 w-full lg:grid lg:grid-rows-2">
-                        <p>- ERC20 기반의 토큰을 지원하여 이더리움 메인넷과 연동한 환경을 구성할 수 있습니다.
-
-                        </p>
-                        <p>- BlockSacnner, APIDocument를 사용하여 Yollet Network를 이용한 고유의 서
-비스 개발이 가능합니다.
-                        </p>
-                    </div>
-                </div>
+          </div>
+          <div class="leading-7">
+            <div class="space-y-4 w-full lg:grid lg:grid-rows-2">
+              <p>
+                - ERC20 기반의 토큰을 지원하여 이더리움 메인넷과 연동한 환경을
+                구성할 수 있습니다.
+              </p>
+              <p>
+                - BlockSacnner, APIDocument를 사용하여 Yollet Network를 이용한
+                고유의 서 비스 개발이 가능합니다.
+              </p>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
     </div>
     <!-- Networktext -->
 
-
-
-
     <!-- App -->
     <div class="bg-blue-50">
-        <section class="flex justify-center flex-col items-center text-center container mx-auto ">
-            <img src="../assets/images/app.png" alt="">
-        </section>
+      <section
+        class="flex justify-center flex-col items-center text-center container mx-auto"
+      >
+        <img src="../assets/images/app.png" alt="" />
+      </section>
     </div>
     <!-- App -->
 
     <!-- Apptext -->
     <div class="lg:mx-40 py-10">
-        <section class="py-12 lg:py-20">
-            <div class="mb-6 text-2xl font-bold">
-                <h1>Yollet App</h1>
+      <section class="py-12 lg:py-20">
+        <div class="mb-6 text-xl lg:text-2xl font-bold">
+          <h1>Yollet App</h1>
+        </div>
+        <div
+          class="lg:grid lg:grid-cols-2 lg:space-x-8 space-y-4 lg:space-y-0"
+          style="font-family: 'Nanum Gothic'"
+        >
+          <div class="">
+            <div class="space-y-4 w-full lg:grid lg:grid-rows-2">
+              <p class="leading-7">
+                - 안전하고 편리한 사용자용 Wallet으로 여러 개가 지갑 주소를 관리
+                할 수 있으며, Yollet Network에 등록된 다양한 토큰을 사용할 수
+                있습니다.
+              </p>
+              <p>
+                - Yollet Network, Yoshop POS와 함께 결제, Reward 기능을 구성할
+                수도 있어 당신의 블록체인 ECO시스템에 사용자와 상점을 연결한
+                서비스를 구성할 수 있습니다.
+              </p>
             </div>
-     <div class="lg:grid lg:grid-cols-2 lg:space-x-8 space-y-4 lg:space-y-0"
-                style="font-family: 'Nanum Gothic';">
-                <div class="">
-                    <div class="space-y-4 w-full lg:grid lg:grid-rows-2">
-                        <p class="">- 안전하고 편리한 사용자용 Wallet으로 여러 개가 지갑 주소를 관리 할 수 있으며, Yollet Network에 등록된 다양한 토큰을 사용할 수 있습니다.
-
-                        </p>
-                        <p>- Yollet Network, Yoshop POS와 함께 결제, Reward 기능을 구성할 수도 있어 당신의 블록체인 ECO시스템에 사용자와 상점을 연결한 서비스를 구성할 수 있습니다.
-                        </p>
-                    </div>
-                </div>
-                <div class="">
-                    <div class=" w-full flex space-x-4">
-                        <img src="../assets/icons/google.png" alt="">
-                        <img src="../assets/icons/apple.png" alt="">
-                    </div>
-                </div>
+          </div>
+          <div class="">
+            <div class="w-full flex space-x-4">
+              <img src="../assets/icons/google.png" alt="" />
+              <img src="../assets/icons/apple.png" alt="" />
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
     </div>
     <!-- Apptext -->
-
-
-
 
     <!-- POS -->
     <div class="bg-blue-50">
-        <section class="flex justify-center flex-col items-center text-center container mx-auto ">
-            <img src="../assets/images/pos.png" alt="">
-        </section>
+      <section
+        class="flex justify-center flex-col items-center text-center container mx-auto"
+      >
+        <img src="../assets/images/pos.png" alt="" />
+      </section>
     </div>
     <!-- POS -->
 
     <!-- POSText -->
     <div class="lg:mx-40 pt-10">
-        <section class="py-12 lg:py-20">
-            <div class="mb-6 text-2xl font-bold">
-                <h1>Yollet POS</h1>
+      <section class="py-12 lg:py-20">
+        <div class="mb-6 text-xl lg:text-2xl font-bold">
+          <h1>Yollet POS</h1>
+        </div>
+        <div
+          class="lg:grid lg:grid-cols-2 lg:space-x-8 space-y-4 lg:space-y-0"
+          style="font-family: 'Nanum Gothic'"
+        >
+          <div class="">
+            <div class="space-y-4 w-full lg:grid lg:grid-rows-2">
+              <p class="leading-7">
+                - Yollet Payment와 연동된 Yoshop POS는 되어 당신의 사업영역을
+                쉽게 확대할 수 있습니다.
+              </p>
+              <p>
+                - Android 기반의 POS 솔루션으로 현금, 신용카드 외에 간편결제,
+                Yollet App과 연동한 리워드와 결제 서비스가 연동되어 있습니다.
+              </p>
             </div>
-             <div class="lg:grid lg:grid-cols-2 lg:space-x-8 space-y-4 lg:space-y-0"
-                style="font-family: 'Nanum Gothic';">
-                <div class="">
-                    <div class="space-y-4 w-full lg:grid lg:grid-rows-2">
-                        <p class="">- Yollet Payment와 연동된 Yoshop POS는 되어 당신의 사업영역을 쉽게 확대할 수 있습니다.
-
-
-                        </p>
-                        <p>- Android 기반의 POS 솔루션으로 현금, 신용카드 외에 간편결제, Yollet App과 연동한 리워드와 결제 서비스가 연동되어 있습니다.
-
-                        </p>
-                    </div>
-                </div>
-                <div class="">
-                    <div class="space-y-4 w-full lg:grid lg:grid-rows-2">
-                        <p>- POS와 Cloud 시스템으로 통합된 백오피스 서비스를 이용해 상점을 더욱 효과적으로 관리할 수 있습니다.
-
-
-                        </p>
-                        <p>- POS, TableOrder, 휴대용POS, KIOSK 등 상점의 판매 유형을 지원합니다.
-                        </p>
-                    </div>
-                </div>
+          </div>
+          <div class="leading-7">
+            <div class="space-y-4 w-full lg:grid lg:grid-rows-2">
+              <p>
+                - POS와 Cloud 시스템으로 통합된 백오피스 서비스를 이용해 상점을
+                더욱 효과적으로 관리할 수 있습니다.
+              </p>
+              <p>
+                - POS, TableOrder, 휴대용POS, KIOSK 등 상점의 판매 유형을
+                지원합니다.
+              </p>
             </div>
-            <button
-                class="border border-gray-300 px-4 text-xs lg:text-base py-2 rounded-md bg-white mt-8 mb-4 mb-16 focus:outline-none focus:border-gray-400 text-sm hover:bg-gray-100 focus:outline-none lg:w-1/6 flex font-bold items-center space-x-2 lg:space-x-4 justify-center">
-                <a href="http://vixco.net/">www.vixco.net</a><i class="fas fa-external-link-alt text-xs"></i>
-            </button>
-        </section>
-
+          </div>
+        </div>
+        <button
+          class="border border-gray-300 px-4 text-xs lg:text-base py-2 rounded-md bg-white mt-8 mb-4 mb-16 focus:outline-none focus:border-gray-400 text-sm hover:bg-gray-100 focus:outline-none lg:w-1/6 flex font-bold items-center space-x-2 lg:space-x-2 justify-center"
+        >
+          <a href="https://Yoshop.net/">www.yoshop.net</a
+          ><i class="fas fa-external-link-alt text-xs"></i>
+        </button>
+      </section>
     </div>
     <!-- POSText -->
-
-
-
 
     <!-- FOOTER -->
     <!-- <footer class="px-10 py-8 lg:py-16 lg:px-8 flex flex-col lg:flex-row lg:container lg:mx-auto lg:justify-between">
@@ -368,8 +466,10 @@
         </div>
     </div> -->
     <!-- Footer2 -->
-</body>
+  </body>
 
-<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-
+  <script
+    src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+    defer
+  ></script>
 </html>
