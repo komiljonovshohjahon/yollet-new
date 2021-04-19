@@ -7,7 +7,7 @@ $(".form-container").submit(function (event, done) {
   event.preventDefault();
   $.ajax({
     type: "POST",
-    url: "http://localhost:5000/post",
+    url: "https://yollet-test-2.vercel.app/gmail-api/gmail",
     data: form.serialize(),
   });
   $("#submitted").removeClass("hide").addClass("open");
