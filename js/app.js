@@ -10,7 +10,7 @@ $(".form-container").submit(function (event, done) {
     url: "http://localhost:5000/post",
     data: form.serialize(),
   });
-  $("#submitted").removeClass("hidden").addClass("open");
+  $("#submitted").removeClass("hide").addClass("open");
 
   // .done(function (data) {
   //   if (data.status == "OK") {
