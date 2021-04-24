@@ -1,150 +1,154 @@
 body {
-    font-family: 'Nanum Gothic', sans-serif;
-    font-family: 'Poppins', sans-serif;
-    /* font-family: 'Rubik', sans-serif; */
+  font-family: "Nanum Gothic", sans-serif;
+  font-family: "Poppins", sans-serif;
+  /* font-family: 'Rubik', sans-serif; */
 
-    /* text-transform: capitalize; */
+  /* text-transform: capitalize; */
 }
 
 h1 {
-    color: rgb(17, 24, 39);
+  color: rgb(17, 24, 39);
 }
 
 p {
-    color: rgb(107, 114, 128);
-    /* white-space: pre-line; */
+  color: rgb(107, 114, 128);
+  /* white-space: pre-line; */
 }
 
 button {
-    color: rgb(75, 85, 99);
-    font-weight: 500;
+  color: rgb(75, 85, 99);
+  font-weight: 500;
 }
 
 ul li {
-    color: rgb(75, 85, 99);
+  color: rgb(75, 85, 99);
 }
 
 .text-orange {
-    color: rgb(249, 115, 22);
+  color: rgb(249, 115, 22);
 }
 
 section {
-    padding: 0 5%;
+  padding: 0 5%;
 }
 
 .infra-section div:nth-of-type(2) p:first-of-type {
-    color: rgb(249, 115, 22);
-
-
+  color: rgb(249, 115, 22);
 }
 
 .qa-list {
-    width: 60%;
+  width: 60%;
 }
 
 @media (min-width: 320px) {
-    .qa-list {
-        width: 100%;
-    }
-
+  .qa-list {
+    width: 100%;
+  }
 }
 
 .qa-list li {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  align-items: center;
 }
 
 .qa-list li p {
-    font-weight: 600;
-    color: black;
+  font-weight: 600;
+  color: black;
 }
 
 .qa-list li button {
-    color: black;
-    font-weight: 600;
+  color: black;
+  font-weight: 600;
 }
 
 .page-list li {
-    padding: 1rem;
-    border-top: 2px white solid;
-    color: rgb(107, 114, 128);
+  padding: 1rem;
+  border-top: 2px white solid;
+  color: rgb(107, 114, 128);
 }
 
 .page-list li:active {
-    border-top: 2px black solid;
-    color: rgb(55, 65, 81);
+  border-top: 2px black solid;
+  color: rgb(55, 65, 81);
 }
 
 form {
-    padding-top: 3rem;
+  padding-top: 3rem;
 }
 
 form div {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    font-size: small;
-    padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-size: small;
+  padding-bottom: 1rem;
 }
 
 form div label {
-    padding-bottom: 3px;
-    color: rgb(55, 65, 81);
-    font-weight: 500;
+  padding-bottom: 3px;
+  color: rgb(55, 65, 81);
+  font-weight: 500;
 }
 
 form button {
-    background-color: rgb(255, 130, 0);
-    color: white;
+  background-color: rgb(255, 130, 0);
+  color: white;
 }
 
 .brochure {
-    background-image: url("../assets/bg/background.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom;
-    color: white;
+  background-image: url("../assets/bg/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  color: white;
 }
 
 .about {
-    background-image: url("../assets/bg/about.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    /* background-position: center; */
+  background-image: url("../assets/bg/about.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background-position: center; */
 }
 
 table thead tr th {
-    color: rgb(107, 114, 128);
-    font-weight: 500;
+  color: rgb(107, 114, 128);
+  font-weight: 500;
 }
 
 table tbody tr td {
-    color: rgb(156, 163, 175);
+  color: rgb(156, 163, 175);
 }
 
 table thead tr th:last-child {
-    padding-right: 0;
+  padding-right: 0;
 }
 
 table tbody tr td:last-child {
-    padding-right: 0;
+  padding-right: 0;
 }
 
 .social-logos {
-    color: rgb(156, 163, 175);
+  color: rgb(156, 163, 175);
 }
 
 .message-head {
-    color: rgb(55, 65, 81);
+  color: rgb(55, 65, 81);
 }
 
 .head-p {
-    color: rgb(75, 85, 99);
+  color: rgb(75, 85, 99);
 }
 
 .inn-head {
-    color: rgb(31, 41, 55);
+  color: rgb(31, 41, 55);
+}
+
+.bgg {
+  background-image: url("../assets/bg/bg-payment-solution.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background-position: center; */
 }
