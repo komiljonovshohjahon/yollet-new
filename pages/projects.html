@@ -18,7 +18,7 @@
       href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../styles/tailwind.css" />
+    <link rel="stylesheet" href="../public/build/tailwind.css" />
     <link rel="stylesheet" href="../styles/projects.css" />
     <link
       rel="shortcut icon"
@@ -40,7 +40,7 @@
             x-data="{ open: false }"
             class="flex flex-col mx-auto lg:items-center lg:flex-row"
           >
-            <div class="flex flex-row items-center justify-between">
+            <div class="flex flex-row items-center justify-between nav-font">
               <a
                 href="./index.html"
                 class="text-lg font-semibold tracking-widest text-gray-900 rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline md:mr-4"
@@ -77,7 +77,7 @@
               >
               <a
                 class="text-gray-900 bg-gray-200 px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-                href="#"
+                href="./projects.html"
                 >Projects</a
               >
               <a
@@ -122,16 +122,11 @@
     <!-- Home -->
     <div class="bg-gray-600 bg-right pt-12 lg:pt-0">
       <section
-        style="font-family: 'Poppins'"
         class="flex justify-center flex-col items-center py-12 lg:pt-20 lg:px-0 text-center container mx-auto px-0 lg:pb-20"
       >
         <div class="flex flex-col items-center w-full">
-          <h1 class="font-bold text-4xl lg:text-5xl text-white">
-            Our Projects
-          </h1>
-          <p
-            class="text-lg lg:text-xl md:text-lg px-10 tracking-wide lg:w-1/2 my-8 text-white"
-          >
+          <h1 class="header">Our Projects</h1>
+          <p class="paragraph lg:w-3/5">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus
             quam explicabo corporis corrupti minima illum officiis? Quae
             quisquam quis nulla quo in, quia laborum, aliquid aspernatur
@@ -143,21 +138,16 @@
     <!-- Home -->
 
     <!-- Projects -->
-    <div class="flex flex-col py-12 lg:py-24">
+    <div class="flex flex-col pt-12 lg:py-24">
       <div
         class="text-white text-center space-y-8 px-10 lg:px-28 py-2 flex flex-col w-full"
       >
-        <div
-          class="flex flex-col items-center lg:mb-8"
-          style="font-family: 'Poppins'"
-        >
-          <div class="text-lg gray-text">
+        <div class="flex flex-col items-center lg:mb-8">
+          <div class="page-head-p">
             <p>Our projects</p>
           </div>
           <div>
-            <h1 class="text-3xl lg:text-4xl font-bold inn-head">
-              VIXCO Project
-            </h1>
+            <h1 class="page-header inn-head">VIXCO Project</h1>
           </div>
         </div>
         <div
@@ -166,11 +156,8 @@
           <div class="w-full lg:flex justify-center">
             <img src="../assets/images/projects.png" alt="" />
           </div>
-          <div class="w-full flex flex-col text-left">
-            <p
-              class="text-left text-base text-center lg:text-left lg:text-base"
-              style="font-family: 'Nanum Gothic'"
-            >
+          <div class="w-full flex flex-col items-center lg:items-start">
+            <p class="page-paragraph gray text-center lg:text-left w-11/12">
               VIXCO는 블록체인 서비스와 오프라인 POS, 무인 대출기를 결합하여
               가맹점과 소비자를 연결하는 특화된 서비스를 제공하기 위한
               프로젝트로 블록체인의 투명성을 기반으로 결제 Data와 실제 정산 Data
@@ -180,7 +167,7 @@
               선도하려는 목적으로 구축되었습니다.
             </p>
             <button
-              class="border border-gray-300 text-base py-2 rounded-md bg-white mt-8 mb-4 mb-16 focus:outline-none focus:border-gray-400 text-sm hover:bg-gray-100 focus:outline-none lg:w-1/3 flex font-bold items-center space-x-4 justify-center"
+              class="button lg:w-1/3 space-x-2 flex items-center justify-center"
             >
               <a href="http://vixco.net" target="_blank">www.vixco.net</a
               ><i class="fas fa-external-link-alt text-xs"></i>
@@ -192,56 +179,36 @@
     <!-- Projects -->
 
     <!-- Solutions -->
-    <div class="flex flex-col items-center py-12 lg:py-24 lg:mx-20 border-b">
+    <div class="flex flex-col items-center pb-12 lg:py-24 lg:mx-20 border-b">
       <div>
         <div class="text-white space-y-8 px-10 lg:px-28 flex flex-col">
           <div class="lg:mb-6">
             <div>
-              <h1
-                style="font-family: 'Poppins'"
-                class="text-xl lg:text-2xl font-bold inn-head"
-              >
-                적용 Solutions
-              </h1>
+              <h1 class="page-header inn-head">적용 Solutions</h1>
             </div>
           </div>
           <div
             class="space-y-4 lg:lg:flex space-y-6 lg:space-y-0 space-x-0 lg:space-x-6 lg:grid lg:grid-cols-3"
           >
             <div class="border p-6 lg:px-8 lg:py-6 rounded-lg space-y-4 flex-1">
-              <h1 style="font-family: 'Poppins'" class="font-bold text-xl">
-                Yollet Network
-              </h1>
-              <p
-                class="text-left text-sm lg:text-base"
-                style="font-family: 'Nanum Gothic'"
-              >
+              <h1 class="table-head">Yollet Network</h1>
+              <p class="page-paragraph gray">
                 빠른 송금 및 결제 서비스를 제공하기 위해 블록체인 네트워크로
                 Yollet Network 적용. ERC20 기반의 VIXCO 토큰은 Yollet Network
                 에서 동작하여 사용자에게 결제 및 송금 서비스를 제공.
               </p>
             </div>
             <div class="border p-6 lg:px-8 lg:py-6 rounded-lg space-y-4 flex-1">
-              <h1 class="font-bold text-xl" style="font-family: 'Poppins'">
-                Yollet Wallet
-              </h1>
-              <p
-                class="text-left text-sm lg:text-base"
-                style="font-family: 'Nanum Gothic'"
-              >
+              <h1 class="table-head">Yollet Wallet</h1>
+              <p class="page-paragraph gray">
                 소비자가 실생활에서 VIXCO 플랫폼을 이용할 수 있도록 Yollet
                 Wallet을 적용. 사용자는 Yollet Wallet을 이용해 VIXCO의 결제,
                 Reward, 송금 서비스를 손쉽게 사용.
               </p>
             </div>
             <div class="border p-6 lg:px-8 lg:py-6 rounded-lg space-y-4 flex-1">
-              <h1 class="font-bold text-xl" style="font-family: 'Poppins'">
-                Yoshop POS
-              </h1>
-              <p
-                class="text-left text-sm lg:text-base"
-                style="font-family: 'Nanum Gothic'"
-              >
+              <h1 class="table-head">Yoshop POS</h1>
+              <p class="page-paragraph gray">
                 VIXCO Project의 오프라인 가맹점용으로 Yoshop POS를 적용.
                 YoshopPOS에 Payment를 연결하여 사용자와 가맹점을 통합하는
                 ECO환경을 제공
@@ -252,13 +219,8 @@
             class="space-y-4 space-x-0 lg:space-x-6 lg:lg:flex space-y-6 lg:space-y-0 lg:space-x-0 lg:grid lg:grid-cols-3"
           >
             <div class="border p-6 lg:px-8 lg:py-6 rounded-lg space-y-4">
-              <h1 class="font-bold text-xl" style="font-family: 'Poppins'">
-                Yollet Payment
-              </h1>
-              <p
-                class="text-left text-sm lg:text-base"
-                style="font-family: 'Nanum Gothic'"
-              >
+              <h1 class="table-head">Yollet Payment</h1>
+              <p class="page-paragraph gray">
                 VIXCO Pay를 구성하기위한 결제 시스템으로 Yollet Payment를
                 적용함. Yollet Payment는 VIXCO Pay의 승인, 취소, Reward, 정산
                 기능을 제공하고, 이를 이용해 소비자, 가맹점, 사업자가 모두
@@ -278,7 +240,7 @@
     >
       <div class="w-full lg:w-1/3 space-y-3 lg:space-y-4">
         <img src="../assets/logos/footer-logo.png" alt="" />
-        <p>Make radically better things</p>
+        <p class="page-head-p">Make radically better things</p>
         <div class="social-logos lg:space-x-6 space-x-4 text-2xl">
           <a href=""><i class="fab fa-facebook"></i></a>
           <a href=""><i class="fab fa-instagram"></i></a>
@@ -291,58 +253,58 @@
         <table class="w-full text-xs lg:text-base text-left">
           <thead>
             <tr>
-              <th class="cursor-pointer pr-4 leading-3 pb-3 lg:pr-32 lg:py-4">
+              <th class="footer-table">
                 <a>Service</a>
               </th>
-              <th class="cursor-pointer pr-4 leading-3 pb-3 lg:pr-32 lg:py-4">
+              <th class="footer-table">
                 <a>Our Projects</a>
               </th>
-              <th class="cursor-pointer pr-4 leading-3 pb-3 lg:pr-32 lg:py-4">
+              <th class="footer-table">
                 <a>Documents</a>
               </th>
-              <th class="cursor-pointer pr-4 leading-3 pb-3 lg:pr-32 lg:py-4">
+              <th class="footer-table">
                 <a>Conctact Us</a>
               </th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td class="cursor-pointer pr-4 leading-3 pb-3 lg:pr-32 lg:py-4">
+              <td class="footer-table">
                 <a>Payment Service</a>
               </td>
-              <td class="cursor-pointer pr-4 leading-3 pb-3 lg:pr-32 lg:py-4">
+              <td class="footer-table">
                 <a>Yollet Wallet</a>
               </td>
               <td></td>
-              <td class="cursor-pointer pr-4 leading-3 pb-3 lg:pr-32 lg:py-4">
+              <td class="footer-table">
                 <a>FAQ</a>
               </td>
             </tr>
             <tr>
-              <td class="cursor-pointer pr-4 leading-3 pb-3 lg:pr-32 lg:py-4">
+              <td class="footer-table">
                 <a>Yollet Token</a>
               </td>
-              <td class="cursor-pointer pr-4 leading-3 pb-3 lg:pr-32 lg:py-4">
+              <td class="footer-table">
                 <a>Payment</a>
               </td>
               <td></td>
-              <td class="cursor-pointer pr-4 leading-3 pb-3 lg:pr-32 lg:py-4">
+              <td class="footer-table">
                 <a>Q&A</a>
               </td>
             </tr>
             <tr>
               <td></td>
-              <td class="cursor-pointer pr-4 leading-3 pb-3 lg:pr-32 lg:py-4">
+              <td class="footer-table">
                 <a>Yollet Scan</a>
               </td>
               <td></td>
-              <td class="cursor-pointer pr-4 leading-3 pb-3 lg:pr-32 lg:py-4">
+              <td class="footer-table">
                 <a>Contact Us</a>
               </td>
             </tr>
             <tr>
               <td></td>
-              <td class="cursor-pointer pr-4 leading-3 pb-3 lg:pr-32 lg:py-4">
+              <td class="footer-table">
                 <a>Issue Token</a>
               </td>
               <td></td>

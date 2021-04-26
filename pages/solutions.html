@@ -18,7 +18,7 @@
       href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../styles/tailwind.css" />
+    <link rel="stylesheet" href="../public/build/tailwind.css" />
     <link rel="stylesheet" href="../styles/solutions.css" />
     <link
       rel="shortcut icon"
@@ -40,7 +40,7 @@
             x-data="{ open: false }"
             class="flex flex-col mx-auto lg:items-center lg:flex-row"
           >
-            <div class="flex flex-row items-center justify-between">
+            <div class="flex flex-row items-center justify-between nav-font">
               <a
                 href="./index.html"
                 class="text-lg font-semibold tracking-widest text-gray-900 rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline md:mr-4"
@@ -125,16 +125,8 @@
         class="flex justify-center flex-col items-center py-12 lg:pt-20 lg:px-0 text-center container mx-auto px-0 lg:pb-20 lg:container lg:mx-auto"
       >
         <div class="flex flex-col items-center w-full">
-          <h1
-            class="font-bold text-4xl lg:text-5xl text-white"
-            style="font-family: 'Poppins'"
-          >
-            Solutions
-          </h1>
-          <p
-            style="font-family: 'Nanum Gothic'"
-            class="text-base lg:text-lg md:text-lg px-10 font-medium tracking-wide leading-5 lg: lg:w-2/3 my-8 text-white"
-          >
+          <h1 class="header">Solutions</h1>
+          <p class="paragraph lg:w-3/5">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus
             quam explicabo corporis corrupti minima illum officiis? Quae
             quisquam quis nulla quo in, quia laborum, aliquid aspernatur
@@ -150,18 +142,15 @@
       <section
         class="flex justify-center flex-col items-center py-12 lg:pt-28 lg:px-0 text-center container mx-auto lg:pb-28"
       >
-        <div class="flex flex-col items-center w-full">
-          <h1
-            class="font-bold text-2xl lg:text-4xl lg:text"
-            style="font-family: 'Poppins'"
-          >
+        <div class="text-base lg:text-base mb-2">
+          <p class="page-head-p">Solutions</p>
+        </div>
+        <div class="flex flex-col items-center w-full space-y-4">
+          <h1 class="page-header">
             Payment Solutions <br class="lg:hidden" />
             for Your Business
           </h1>
-          <p
-            style="font-family: 'Nanum Gothic'"
-            class="text-md lg:text-base md:text-lg tracking-wide font-medium lg:w-1/2 my-8 leading-6"
-          >
+          <p class="page-paragraph lg:w-2/3">
             Yollet 솔루션을 이용해 사업자, 상점, 소비자를 통합하는 서비스를
             제공할 수 있 습니다. Yollet 솔루션은 온라인과 오프라인을 통합하고
             다양한 사용자를 연결하는 독창적인 비즈니스 아이디어를 실현할 수
@@ -184,21 +173,15 @@
     <!-- PaymentsImage -->
 
     <!-- PaymentText -->
-    <div class="lg:mx-40 py-10">
+    <div class="lg:mx-40 pb-10">
       <section class="py-12 lg:py-20">
-        <div
-          class="mb-6 text-xl lg:text-2xl font-bold"
-          style="font-family: 'Poppins'"
-        >
+        <div class="table-head">
           <h1>Yollet Payment</h1>
         </div>
-        <div
-          class="lg:grid lg:grid-cols-2 lg:space-x-8 space-y-4 lg:space-y-0"
-          style="font-family: 'Nanum Gothic'"
-        >
+        <div class="solutions-cont">
           <div class="leading-7">
-            <div class="space-y-4 w-full lg:grid lg:grid-rows-2">
-              <p class="">
+            <div class="grid-cont">
+              <p>
                 - 신용카드 등 전통적인 결제수단부터, 간편 결제, 토큰 결제 등
                 최신 결제 수단 등 다양한 결제수단을 지원합니다.
               </p>
@@ -209,7 +192,7 @@
             </div>
           </div>
           <div class="leading-7">
-            <div class="space-y-4 w-full lg:grid lg:grid-rows-2">
+            <div class="grid-cont">
               <p>
                 -Cloud 기반의 결제 시스템으로 독립적인 초기비용을 최소화 하여
                 구성할 수 있습니다.
@@ -236,20 +219,14 @@
     <!-- Network -->
 
     <!-- Networktext -->
-    <div class="lg:mx-40 py-10">
+    <div class="lg:mx-40 pb-10">
       <section class="py-12 lg:py-20">
-        <div
-          class="mb-6 text-xl lg:text-2xl font-bold"
-          style="font-family: 'Poppins'"
-        >
+        <div class="mb-6 text-xl lg:text-2xl font-bold">
           <h1>Yollet Network</h1>
         </div>
-        <div
-          class="lg:grid lg:grid-cols-2 lg:space-x-8 space-y-4 lg:space-y-0"
-          style="font-family: 'Nanum Gothic'"
-        >
+        <div class="solutions-cont">
           <div class="leading-7">
-            <div class="space-y-4 w-full lg:grid lg:grid-rows-2">
+            <div class="grid-cont">
               <p class="">
                 - HyperLedger Fabic을 기반으로 결제 처리에 최적화 하여 개발한
                 블록체인 솔루션으로 빠른 처리 속도와 신뢰성를 확보하고 있습니다.
@@ -264,7 +241,7 @@
             </div>
           </div>
           <div class="leading-7">
-            <div class="space-y-4 w-full lg:grid lg:grid-rows-4">
+            <div class="grid-cont">
               <p>
                 - ERC20 기반의 토큰을 지원하여 이더리움 메인넷과 연동한 환경을
                 구성할 수 있습니다.
@@ -291,17 +268,14 @@
     <!-- App -->
 
     <!-- Apptext -->
-    <div class="lg:mx-40 py-10">
+    <div class="lg:mx-40 pb-10">
       <section class="py-12 lg:py-20">
         <div class="mb-6 text-xl lg:text-2xl font-bold">
           <h1>Yollet App</h1>
         </div>
-        <div
-          class="lg:grid lg:grid-cols-2 lg:space-x-8 space-y-4 lg:space-y-0"
-          style="font-family: 'Nanum Gothic'"
-        >
+        <div class="solutions-cont">
           <div class="">
-            <div class="space-y-4 w-full lg:grid lg:grid-rows-2">
+            <div class="grid-cont">
               <p class="leading-7">
                 - 안전하고 편리한 사용자용 Wallet으로 여러 개가 지갑 주소를 관리
                 할 수 있으며, Yollet Network에 등록된 다양한 토큰을 사용할 수
@@ -337,16 +311,13 @@
 
     <!-- POSText -->
     <div class="lg:mx-40 pt-10">
-      <section class="py-12 lg:py-20">
+      <section class="pb-12 lg:py-20">
         <div class="mb-6 text-xl lg:text-2xl font-bold">
           <h1>Yollet POS</h1>
         </div>
-        <div
-          class="lg:grid lg:grid-cols-2 lg:space-x-8 space-y-4 lg:space-y-0"
-          style="font-family: 'Nanum Gothic'"
-        >
+        <div class="solutions-cont">
           <div class="">
-            <div class="space-y-4 w-full lg:grid lg:grid-rows-2">
+            <div class="grid-cont">
               <p class="leading-7">
                 - Yollet Payment와 연동된 Yoshop POS는 되어 당신의 사업영역을
                 쉽게 확대할 수 있습니다.
@@ -358,7 +329,7 @@
             </div>
           </div>
           <div class="leading-7">
-            <div class="space-y-4 w-full lg:grid lg:grid-rows-2">
+            <div class="grid-cont">
               <p>
                 - POS와 Cloud 시스템으로 통합된 백오피스 서비스를 이용해 상점을
                 더욱 효과적으로 관리할 수 있습니다.
@@ -370,10 +341,8 @@
             </div>
           </div>
         </div>
-        <button
-          class="border border-gray-300 px-4 text-xs lg:text-base py-2 rounded-md bg-white mt-8 mb-4 mb-16 focus:outline-none focus:border-gray-400 text-sm hover:bg-gray-100 focus:outline-none lg:w-1/6 flex font-bold items-center space-x-2 lg:space-x-2 justify-center"
-        >
-          <a href="https://Yoshop.net/">www.yoshop.net</a
+        <button class="button flex items-center space-x-2">
+          <a href="http://www.yoshop.net/">www.yoshop.net</a
           ><i class="fas fa-external-link-alt text-xs"></i>
         </button>
       </section>

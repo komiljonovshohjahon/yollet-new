@@ -30,6 +30,7 @@ nav a {
 
 .gray {
   color: rgb(75, 85, 99);
+  font-weight: 500;
 }
 
 h1 {
@@ -38,7 +39,6 @@ h1 {
 
 p {
   color: rgb(107, 114, 128);
-  font-family: "Nanum Gothic", sans-serif;
 }
 
 button {
