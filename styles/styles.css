@@ -49,6 +49,10 @@
   @apply text-base lg:text-lg md:text-lg px-10 font-medium tracking-wide leading-5 my-8 text-white font-nanum;
 }
 
+.cont {
+  @apply flex justify-center flex-col items-center py-12 lg:pt-28 lg:px-0 text-center container mx-auto lg:pb-28;
+}
+
 .solutions-cont {
   @apply lg:grid lg:grid-cols-2 lg:space-x-8 space-y-4 lg:space-y-0 mt-4 font-nanum;
 }
@@ -59,4 +63,23 @@
 
 .nav-font a {
   @apply font-poppins;
+}
+
+.questions-table {
+  @apply text-xs flex justify-center;
+}
+
+.questions-table tr {
+  @apply h-10 border p-2;
+}
+
+.questions-table tbody tr td:first-child {
+  @apply text-center px-2;
+}
+.questions-table tbody tr td {
+  @apply text-center text-black;
+}
+
+.questions-table tbody tr td:nth-child(2) {
+  @apply text-left lg:w-1/2;
 }
