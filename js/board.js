@@ -9,8 +9,6 @@ const getData = async () => {
   for (let i = 0; i < 10; i++) {
     var datee = new Date(res[i].created_at).toLocaleDateString();
 
-    console.log(datee);
-
     var tr = document.createElement("tr");
 
     var id = document.createElement("td");
@@ -18,6 +16,7 @@ const getData = async () => {
     var title = document.createElement("td");
     var link = document.createElement("a");
     title.appendChild(link);
+    link.href = `http://localhost:1337/boards/${res[i].id}`;
 
     var name = document.createElement("td");
     var date = document.createElement("td");
@@ -30,7 +29,7 @@ const getData = async () => {
     var viewsNode = document.createTextNode(res[i].views);
 
     id.appendChild(idNode);
-    title.appendChild(titleNode);
+    link.appendChild(titleNode);
     name.appendChild(nameNode);
     date.appendChild(dateNode);
     views.appendChild(viewsNode);
