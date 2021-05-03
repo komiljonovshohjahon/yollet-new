@@ -1,9 +1,6 @@
 body {
   font-family: "Nanum Gothic", sans-serif;
   font-family: "Poppins", sans-serif;
-  /* font-family: 'Rubik', sans-serif; */
-
-  /* text-transform: capitalize; */
 }
 
 h1 {
@@ -75,6 +72,10 @@ section {
   color: rgb(55, 65, 81);
 }
 
+button {
+  outline: none;
+}
+
 form {
   padding-top: 3rem;
 }
@@ -84,10 +85,12 @@ form label {
 
 form input {
   width: 100%;
+  outline: none;
 }
 form textarea {
   width: 100%;
   margin-bottom: 0.5rem;
+  outline: none;
 }
 
 .button-submit {
