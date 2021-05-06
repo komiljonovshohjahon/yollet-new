@@ -2,8 +2,6 @@ const checkbox = document.querySelector(".checkbox-out");
 const success = document.querySelector(".success");
 success.classList.add("hidden");
 
-console.log(success);
-
 let on = false;
 checkbox.addEventListener("click", function () {
   on = !on;
