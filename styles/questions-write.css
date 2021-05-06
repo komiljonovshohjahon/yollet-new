@@ -182,3 +182,23 @@ table tbody tr td:last-child {
 .form-container label {
   color: gray;
 }
+
+#facebook:hover {
+  color: #3b5998;
+}
+
+#instagram:hover {
+  color: #3f729b;
+}
+
+#twitter:hover {
+  color: #00acee;
+}
+
+#github:hover {
+  color: #171515;
+}
+
+#basketball:hover {
+  color: #ea4c89;
+}
