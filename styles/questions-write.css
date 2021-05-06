@@ -178,3 +178,7 @@ table tbody tr td:last-child {
   background-color: rgb(255, 130, 0);
   justify-content: flex-end;
 }
+
+.form-container label {
+  color: gray;
+}

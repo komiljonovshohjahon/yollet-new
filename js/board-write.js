@@ -32,6 +32,7 @@ $(() => {
     })
       .done(function () {
         success.classList.remove("hidden");
+        $(".form-container").get(0).reset();
         console.log("succes");
       })
       .fail(function () {

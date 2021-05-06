@@ -160,9 +160,11 @@
     <!-- Questions header -->
 
     <!-- Questions table -->
-    <div>
+    <div
+      class="px-10 py-8 lg:py-16 lg:px-52 flex flex-col lg:container lg:mx-auto"
+    >
       <div class="w-full flex justify-center mb-4">
-        <div class="flex justify-between w-full mx-8 lg:mx-48 text-xs">
+        <div class="flex justify-between w-full text-xs">
           <div class="space-x-2 flex">
             <select class="border px-2 py-2 rounded-md shadow">
               <option>제목 <i class="fas fa-chevron-down"></i></option>
@@ -180,7 +182,7 @@
         </div>
       </div>
 
-      <div class="w-full lg:px-48 questions-table">
+      <div class="w-full questions-table">
         <table class="w-full">
           <thead>
             <tr>
@@ -196,13 +198,16 @@
       </div>
 
       <div class="w-full flex justify-center mt-4">
-        <div class="flex justify-between w-full mx-8 lg:mx-48 text-xs">
+        <div class="flex justify-between w-full text-xs">
           <div class="space-x-2 flex">
-            <button class="border px-2 py-2 rounded-md shadow">제목</button>
-            <button class="border px-2 py-2 rounded-md shadow">제목</button>
+            <button class="border px-2 py-2 rounded-md shadow">이전</button>
+            <button class="border px-2 py-2 rounded-md shadow">다음</button>
           </div>
           <div class="flex items-center">
-            <p class="text-black">Page <span>1</span> of <span>10</span></p>
+            <p class="text-black">
+              Page <span class="font-bold">1</span> of
+              <span class="font-bold">10</span>
+            </p>
           </div>
           <div>
             <select class="border px-2 py-2 rounded-md shadow">
@@ -216,7 +221,7 @@
 
     <!-- FOOTER -->
     <footer
-      class="px-10 py-8 lg:py-16 lg:px-8 flex flex-col lg:flex-row lg:container lg:mx-auto lg:justify-between"
+      class="px-10 py-8 lg:py-16 lg:px-36 flex flex-col lg:flex-row lg:container lg:mx-auto lg:justify-between"
     >
       <div class="w-full lg:w-1/3 space-y-3 lg:space-y-4">
         <img src="../assets/logos/footer-logo.png" alt="" />

@@ -30,7 +30,7 @@
 }
 
 .footer-table {
-  @apply cursor-pointer pr-4 leading-3 pb-3 lg:pr-32 lg:py-4;
+  @apply cursor-pointer pr-4 leading-3 pb-3 lg:pr-20 lg:py-4;
 }
 
 .button {

@@ -8,6 +8,10 @@ h1 {
   color: rgb(17, 24, 39);
 }
 
+input {
+  outline: none;
+}
+
 p {
   color: rgb(107, 114, 128);
   /* white-space: pre-line; */
@@ -16,6 +20,7 @@ p {
 button {
   color: rgb(75, 85, 99);
   font-weight: 500;
+  outline: none;
 }
 
 ul li {
