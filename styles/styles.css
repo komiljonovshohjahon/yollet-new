@@ -70,12 +70,13 @@
 }
 
 .questions-table tr {
-  @apply h-10 border p-2;
+  @apply h-10 border-t border-b lg:border p-2;
 }
 
 .questions-table tbody tr td:first-child {
-  @apply text-center px-2;
+  @apply text-center px-2 hidden lg:table-cell;
 }
+
 .questions-table tbody tr td {
   @apply text-center text-black;
 }

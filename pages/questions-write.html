@@ -244,17 +244,18 @@
         </div>
 
         <div>
-          <div class="flex justify-between w-full text-xs">
+          <div class="flex flex-col lg:flex-row justify-between w-full text-xs">
             <div class="flex flex-col space-y-2">
               <label>비공개 여부</label>
               <!-- add pressed class in order to activate or remove to deactivate -->
-              <div class="checkbox-out">
-                <div class="checkbox-in"></div>
+              <div class="flex items-center space-x-2 lg:space-x-0 lg:block">
+                <div class="checkbox-out">
+                  <div class="checkbox-in"></div>
+                </div>
+                <label class="text-gray-400"
+                  >다른사람이 나의 글을 열람할 수 없습니다</label
+                >
               </div>
-
-              <label class="text-gray-400"
-                >다른사람이 나의 글을 열람할 수 없습니다</label
-              >
             </div>
 
             <div
@@ -263,7 +264,7 @@
               <h1 class="text-white">Notice is posted</h1>
             </div>
 
-            <div>
+            <div class="mt-6 lg:mt-0 space-x-4 lg:space-x-2">
               <button class="border px-2 py-2 rounded-md shadow">
                 <a href="./questions.html">취소</a>
               </button>

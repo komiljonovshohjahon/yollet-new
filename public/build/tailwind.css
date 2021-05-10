@@ -32198,15 +32198,29 @@ video {
 }
 
 .questions-table tr {
-  border-width: 1px;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
   height: 2.5rem;
   padding: 0.5rem;
 }
 
+@media (min-width: 1024px) {
+  .questions-table tr {
+    border-width: 1px;
+  }
+}
+
 .questions-table tbody tr td:first-child {
+  display: none;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .questions-table tbody tr td:first-child {
+    display: table-cell;
+  }
 }
 
 .questions-table tbody tr td {

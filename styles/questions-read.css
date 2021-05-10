@@ -1,15 +1,14 @@
+html {
+  visibility: hidden;
+}
+
 body {
   font-family: "Nanum Gothic", sans-serif;
   font-family: "Poppins", sans-serif;
-  /* font-family: 'Rubik', sans-serif; */
 }
 
 h1 {
   color: rgb(17, 24, 39);
-}
-
-input {
-  outline: none;
 }
 
 p {
@@ -20,7 +19,6 @@ p {
 button {
   color: rgb(75, 85, 99);
   font-weight: 500;
-  outline: none;
 }
 
 ul li {
@@ -29,10 +27,6 @@ ul li {
 
 .text-orange {
   color: rgb(249, 115, 22);
-}
-
-section {
-  padding: 0 5%;
 }
 
 .infra-section div:nth-of-type(2) p:first-of-type {
@@ -78,25 +72,28 @@ section {
   color: rgb(55, 65, 81);
 }
 
+button {
+  outline: none;
+}
+
 form {
   padding-top: 3rem;
 }
-
-form div {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  font-size: small;
-  padding-bottom: 1rem;
+form label {
+  margin: 0.2rem 0;
 }
 
-form div label {
-  padding-bottom: 3px;
-  color: rgb(55, 65, 81);
-  font-weight: 500;
+form input {
+  width: 100%;
+  outline: none;
+}
+form textarea {
+  width: 100%;
+  margin-bottom: 0.5rem;
+  outline: none;
 }
 
-form button {
+.button-submit {
   background-color: rgb(255, 130, 0);
   color: white;
 }
@@ -133,10 +130,6 @@ table tbody tr td:last-child {
   padding-right: 0;
 }
 
-.questions-table table tbody tr:hover {
-  background-color: #f1f1f188;
-}
-
 .social-logos {
   color: rgb(156, 163, 175);
 }
@@ -157,6 +150,39 @@ table tbody tr td:last-child {
   background-color: #e5e7eb;
 }
 
+.checkbox-out {
+  height: 2rem;
+  width: 4rem;
+  background-color: #ddd;
+  border: none;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+
+.checkbox-in {
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.pressed {
+  display: flex;
+  background-color: rgb(255, 130, 0);
+  justify-content: flex-end;
+}
+
+.form-container label {
+  color: gray;
+}
+
 #facebook:hover {
   color: #3b5998;
 }
@@ -175,4 +201,31 @@ table tbody tr td:last-child {
 
 #basketball:hover {
   color: #ea4c89;
+}
+
+.message {
+}
+
+#message {
+  float: inline-start;
+}
+
+#board thead {
+  float: left;
+}
+
+#board thead th {
+  display: block;
+}
+
+#board tbody {
+  float: right;
+}
+
+#board td {
+  padding: 5px 0;
+  color: #4b5563;
+}
+#board {
+  color: #4b5563;
 }
