@@ -15,5 +15,4 @@ const getDataa = async () => {
 
 $(document).ready(function () {
   getDataa();
-  document.getElementsByTagName("body")[0].style.visibility = "visible";
 });
