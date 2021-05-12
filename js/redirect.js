@@ -6,10 +6,13 @@ const getDataa = async () => {
   const data = await fetch(url);
   const res = await data.json();
 
-  console.log(res);
-
-  if (res.private) {
-    window.location.replace("https://www.google.com");
+  if (localStorage.getItem("check")) {
+    `http://127.0.0.1:5500/pages/questions-read.html?${query}`;
+    localStorage.clear();
+  } else {
+    window.location.replace(
+      `http://127.0.0.1:5500/pages/password.html?${query}`
+    );
   }
 };
 

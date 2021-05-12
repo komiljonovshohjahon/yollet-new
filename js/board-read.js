@@ -5,8 +5,6 @@ const title = document.querySelector("#title");
 const message = document.querySelector("#message");
 const reply = document.querySelector("#reply");
 
-console.log("AFTER PAGE LOAD");
-
 var query = window.location.search;
 query = query.replace("?", "");
 
