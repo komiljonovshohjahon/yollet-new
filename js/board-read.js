@@ -8,7 +8,7 @@ const edit = document.querySelector("#edit");
 
 setTimeout(() => {
   hide.classList.remove("hide-content");
-}, 200);
+}, 400);
 
 var query = window.location.search;
 query = query.replace("?", "");

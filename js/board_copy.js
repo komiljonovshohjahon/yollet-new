@@ -20,7 +20,9 @@ var number = parseInt(items_number.value);
 var page_num = 0;
 var word;
 var page = parseInt(page_number.innerHTML);
-var total_page = (total_pages.innerHTML = dataArray.length);
+var total_page = getDataCount().then(
+  (res) => (total_pages.innerHTML = Math.round(res / 10))
+);
 
 search_input.addEventListener("change", function () {
   word = search_input.value;
@@ -32,7 +34,7 @@ items_number.addEventListener("change", function () {
   page = 1;
   page_number.innerHTML = page;
   total_pages.innerHTML = getDataCount().then(
-    (res) => (total_pages.innerHTML = Math.floor(res / number))
+    (res) => (total_pages.innerHTML = Math.round(res / number))
   );
   getData(number, search_type, word, 0);
 });
@@ -85,7 +87,7 @@ const getDataSearch = async (search, num, search_type) => {
   const res = await data.json();
   var element = document.getElementById("tbody");
 
-  total_pages.innerHTML = Math.floor(res.length / num) + 1;
+  total_pages.innerHTML = Math.round(res.length / num) + 1;
 
   while (element.lastElementChild) {
     element.removeChild(element.lastElementChild);
@@ -200,7 +202,7 @@ function pageButtonChecker() {
     previous_button.style.cursor = "pointer";
   }
 
-  if (page > dataArray.length) {
+  if (page > total_pages - 1) {
     next_button.disabled = true;
     next_button.style.cursor = "not-allowed";
   } else {
@@ -212,7 +214,7 @@ function pageButtonChecker() {
 getData(number, false, false, page_num);
 
 window.onload = getDataCount().then(
-  (res) => (total_pages.innerHTML = Math.floor(res / 10))
+  (res) => (total_pages.innerHTML = Math.round(res / 10))
 );
 
 async function getDataCount(limit, search_type, word, start) {

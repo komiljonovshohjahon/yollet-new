@@ -10,6 +10,7 @@ const getDataa = async () => {
   if (res.private) {
     if (localStorage.getItem("check")) {
       `http://127.0.0.1:5500/pages/questions-read.html?${query}`;
+      await fetch(`http://localhost:1337/boards/${query}/counter`);
       localStorage.clear();
     } else {
       window.location.replace(
