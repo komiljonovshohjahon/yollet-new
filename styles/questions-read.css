@@ -1,3 +1,7 @@
+.hide-content {
+  visibility: hidden;
+}
+
 body {
   font-family: "Nanum Gothic", sans-serif;
   font-family: "Poppins", sans-serif;

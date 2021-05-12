@@ -7,11 +7,29 @@ const page = document.querySelector("#page");
 const total_pages = document.querySelector("#total-pages");
 const next_button = document.querySelector("#next");
 const previous_button = document.querySelector("#previous");
-const toogle_search = document.querySelector("#search-toogle");
+const toggle_search = document.querySelector("#search-toggle");
 const search_section = document.querySelector("#search-section");
 const write = document.querySelector("#write");
 
-var toogle = false;
+function pageButtonChecker() {
+  if (parseInt(page.innerHTML) < 2) {
+    previous_button.disabled = true;
+    previous_button.style.cursor = "not-allowed";
+  } else {
+    previous_button.disabled = false;
+    previous_button.style.cursor = "pointer";
+  }
+
+  if (parseInt(page.innerHTML) > parseInt(total_pages.innerHTML) - 1) {
+    next_button.disabled = true;
+    next_button.style.cursor = "not-allowed";
+  } else {
+    next_button.disabled = false;
+    next_button.style.cursor = "pointer";
+  }
+}
+
+var toggle = false;
 var search_type = search_select.value;
 var number = items_number.value;
 var page_num = 10;
@@ -47,9 +65,9 @@ previous_button.addEventListener("click", function () {
   getDataPaging(page_num, parseInt(number));
 });
 
-toogle_search.addEventListener("click", function () {
-  toogle = !toogle;
-  if (toogle) {
+toggle_search.addEventListener("click", function () {
+  toggle = !toggle;
+  if (toggle) {
     search_section.classList.remove("hidden");
     search_section.classList.add("flex");
     write.classList.remove("hidden");
@@ -63,9 +81,11 @@ toogle_search.addEventListener("click", function () {
 });
 
 const getData = async (num) => {
-  const url = "http://localhost:1337/boards/?_sort=id:DESC";
+  const url = `http://localhost:1337/boards/?_limit=${num}&&_sort=id:DESC`;
   const data = await fetch(url);
   const res = await data.json();
+
+  console.log(typeof res);
 
   total_pages.innerHTML = Math.floor(res.length / num) + 1;
 
@@ -111,6 +131,7 @@ const getData = async (num) => {
     tr.appendChild(views);
 
     element.appendChild(tr);
+    pageButtonChecker();
   }
 };
 
@@ -124,18 +145,6 @@ const getDataSelect = async (num) => {
   total_pages.innerHTML = Math.floor(res.length / num) + 1;
 
   page_num = res.length;
-
-  if (res.length < num) {
-    next_button.disabled = true;
-    previous_button.disabled = true;
-    next_button.style.cursor = "not-allowed";
-    previous_button.style.cursor = "not-allowed";
-  } else {
-    next_button.disabled = false;
-    previous_button.disabled = false;
-    next_button.style.cursor = "pointer";
-    previous_button.style.cursor = "pointer";
-  }
 
   var element = document.getElementById("tbody");
 
@@ -178,6 +187,8 @@ const getDataSelect = async (num) => {
     tr.appendChild(views);
 
     element.appendChild(tr);
+
+    pageButtonChecker();
   }
 };
 
@@ -202,7 +213,7 @@ const getDataSearch = async (search, num, search_type) => {
     var title = document.createElement("td");
     var link = document.createElement("a");
     title.appendChild(link);
-    link.href = `http://localhost:1337/boards/${res[i].id}`;
+    link.href = `http://127.0.0.1:5500/pages/questions-read.html?${res[i].id}`;
 
     var name = document.createElement("td");
     var date = document.createElement("td");
@@ -228,21 +239,7 @@ const getDataSearch = async (search, num, search_type) => {
 
     element.appendChild(tr);
 
-    if (parseInt(page.innerHTML) < 2) {
-      previous_button.disabled = true;
-      previous_button.style.cursor = "not-allowed";
-    } else {
-      previous_button.disabled = false;
-      previous_button.style.cursor = "pointer";
-    }
-
-    if (parseInt(page.innerHTML) > parseInt(total_pages.innerHTML) - 1) {
-      next_button.disabled = true;
-      next_button.style.cursor = "not-allowed";
-    } else {
-      next_button.disabled = false;
-      next_button.style.cursor = "pointer";
-    }
+    pageButtonChecker();
   }
 };
 
@@ -293,21 +290,7 @@ const getDataPaging = async (start, num) => {
 
     element.appendChild(tr);
 
-    if (parseInt(page.innerHTML) < 2) {
-      previous_button.disabled = true;
-      previous_button.style.cursor = "not-allowed";
-    } else {
-      previous_button.disabled = false;
-      previous_button.style.cursor = "pointer";
-    }
-
-    if (parseInt(page.innerHTML) > parseInt(total_pages.innerHTML) - 1) {
-      next_button.disabled = true;
-      next_button.style.cursor = "not-allowed";
-    } else {
-      next_button.disabled = false;
-      next_button.style.cursor = "pointer";
-    }
+    pageButtonChecker();
   }
 };
 

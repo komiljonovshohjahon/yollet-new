@@ -4,9 +4,18 @@ const phone = document.querySelector("#phone");
 const title = document.querySelector("#title");
 const message = document.querySelector("#message");
 const reply = document.querySelector("#reply");
+const edit = document.querySelector("#edit");
+
+setTimeout(() => {
+  hide.classList.remove("hide-content");
+}, 200);
 
 var query = window.location.search;
 query = query.replace("?", "");
+
+edit.addEventListener("click", function () {
+  window.location.href = `http://127.0.0.1:5500/pages/password.html?edit/${query}`;
+});
 
 const getData = async () => {
   const url = `http://localhost:1337/boards/${query}`;

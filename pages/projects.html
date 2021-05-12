@@ -34,7 +34,13 @@
     <div class="bg-white sticky top-0 z-10 py-4">
       <div class="lg:px-10 lg:container lg:mx-auto">
         <div
-          class="text-gray-700 dark-mode:text-gray-200 dark-mode:bg-gray-800 px-4 sm:px-10 lg:px-20"
+          class="
+            text-gray-700
+            dark-mode:text-gray-200 dark-mode:bg-gray-800
+            px-4
+            sm:px-10
+            lg:px-20
+          "
         >
           <div
             x-data="{ open: false }"
@@ -43,11 +49,26 @@
             <div class="flex flex-row items-center justify-between nav-font">
               <a
                 href="./index.html"
-                class="text-lg font-semibold tracking-widest text-gray-900 rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline md:mr-4"
+                class="
+                  text-lg
+                  font-semibold
+                  tracking-widest
+                  text-gray-900
+                  rounded-lg
+                  dark-mode:text-white
+                  focus:outline-none
+                  focus:shadow-outline
+                  md:mr-4
+                "
                 ><img src="../assets/logos/Logo.png"
               /></a>
               <button
-                class="lg:hidden rounded-lg focus:outline-none focus:shadow-outline"
+                class="
+                  lg:hidden
+                  rounded-lg
+                  focus:outline-none
+                  focus:shadow-outline
+                "
                 @click="open = !open"
               >
                 <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
@@ -68,41 +89,192 @@
             </div>
             <nav
               :class="{'flex': open, 'hidden': !open}"
-              class="flex-col flex-grow pb-4 md:pb-0 hidden lg:flex lg:justify-end lg:flex-row font-bold"
+              class="
+                flex-col flex-grow
+                pb-4
+                md:pb-0
+                hidden
+                lg:flex
+                lg:justify-end
+                lg:flex-row
+                font-bold
+              "
             >
               <a
-                class="px-4 py-2 mt-2 text-sm font-semibold rounded-lg dark-mode:bg-gray-700 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                class="
+                  px-4
+                  py-2
+                  mt-2
+                  text-sm
+                  font-semibold
+                  rounded-lg
+                  dark-mode:bg-gray-700
+                  dark-mode:hover:bg-gray-600
+                  dark-mode:focus:bg-gray-600
+                  dark-mode:focus:text-white
+                  dark-mode:hover:text-white
+                  dark-mode:text-gray-200
+                  md:mt-0
+                  hover:bg-gray-200
+                  focus:bg-gray-200
+                  focus:outline-none
+                  focus:shadow-outline
+                "
                 href="./index.html"
                 >Home</a
               >
               <a
-                class="text-gray-900 bg-gray-200 px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                class="
+                  text-gray-900
+                  bg-gray-200
+                  px-4
+                  py-2
+                  mt-2
+                  text-sm
+                  font-semibold
+                  bg-transparent
+                  rounded-lg
+                  dark-mode:bg-transparent
+                  dark-mode:hover:bg-gray-600
+                  dark-mode:focus:bg-gray-600
+                  dark-mode:focus:text-white
+                  dark-mode:hover:text-white
+                  dark-mode:text-gray-200
+                  md:mt-0
+                  md:ml-4
+                  hover:bg-gray-200
+                  focus:bg-gray-200
+                  focus:outline-none
+                  focus:shadow-outline
+                "
                 href="./projects.html"
                 >Projects</a
               >
               <a
-                class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                class="
+                  px-4
+                  py-2
+                  mt-2
+                  text-sm
+                  font-semibold
+                  bg-transparent
+                  rounded-lg
+                  dark-mode:bg-transparent
+                  dark-mode:hover:bg-gray-600
+                  dark-mode:focus:bg-gray-600
+                  dark-mode:focus:text-white
+                  dark-mode:hover:text-white
+                  dark-mode:text-gray-200
+                  md:mt-0
+                  md:ml-4
+                  hover:bg-gray-200
+                  focus:bg-gray-200
+                  focus:outline-none
+                  focus:shadow-outline
+                "
                 href="./solutions.html"
                 >Solutions</a
               >
               <a
-                class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                class="
+                  px-4
+                  py-2
+                  mt-2
+                  text-sm
+                  font-semibold
+                  bg-transparent
+                  rounded-lg
+                  dark-mode:bg-transparent
+                  dark-mode:hover:bg-gray-600
+                  dark-mode:focus:bg-gray-600
+                  dark-mode:focus:text-white
+                  dark-mode:hover:text-white
+                  dark-mode:text-gray-200
+                  md:mt-0
+                  md:ml-4
+                  hover:bg-gray-200
+                  focus:bg-gray-200
+                  focus:outline-none
+                  focus:shadow-outline
+                "
                 href="#"
                 >Contact Us</a
               >
               <a
-                class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                class="
+                  px-4
+                  py-2
+                  mt-2
+                  text-sm
+                  font-semibold
+                  bg-transparent
+                  rounded-lg
+                  dark-mode:bg-transparent
+                  dark-mode:hover:bg-gray-600
+                  dark-mode:focus:bg-gray-600
+                  dark-mode:focus:text-white
+                  dark-mode:hover:text-white
+                  dark-mode:text-gray-200
+                  md:mt-0
+                  md:ml-4
+                  hover:bg-gray-200
+                  focus:bg-gray-200
+                  focus:outline-none
+                  focus:shadow-outline
+                "
                 href="http://www.yollet.net/doc/block-api-reference.html"
                 >Resource</a
               >
               <a
-                class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline text-orange"
+                class="
+                  px-4
+                  py-2
+                  mt-2
+                  text-sm
+                  font-semibold
+                  bg-transparent
+                  rounded-lg
+                  dark-mode:bg-transparent
+                  dark-mode:hover:bg-gray-600
+                  dark-mode:focus:bg-gray-600
+                  dark-mode:focus:text-white
+                  dark-mode:hover:text-white
+                  dark-mode:text-gray-200
+                  md:mt-0
+                  md:ml-4
+                  hover:bg-gray-200
+                  focus:bg-gray-200
+                  focus:outline-none
+                  focus:shadow-outline
+                  text-orange
+                "
                 href="https://yollet-scan.vercel.app/"
                 target="_blank"
                 >Yollet Scan</a
               >
               <a
-                class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline text-orange"
+                class="
+                  px-4
+                  py-2
+                  mt-2
+                  text-sm
+                  font-semibold
+                  bg-transparent
+                  rounded-lg
+                  dark-mode:bg-transparent
+                  dark-mode:hover:bg-gray-600
+                  dark-mode:focus:bg-gray-600
+                  dark-mode:focus:text-white
+                  dark-mode:hover:text-white
+                  dark-mode:text-gray-200
+                  md:mt-0
+                  md:ml-4
+                  hover:bg-gray-200
+                  focus:bg-gray-200
+                  focus:outline-none
+                  focus:shadow-outline
+                  text-orange
+                "
                 href="#"
                 >Yollet Service</a
               >
@@ -122,7 +294,20 @@
     <!-- Home -->
     <div class="bg-gray-600 bg-right pt-12 lg:pt-0">
       <section
-        class="flex justify-center flex-col items-center py-12 lg:pt-20 lg:px-0 text-center container mx-auto px-0 lg:pb-20"
+        class="
+          flex
+          justify-center
+          flex-col
+          items-center
+          py-12
+          lg:pt-20
+          lg:px-0
+          text-center
+          container
+          mx-auto
+          px-0
+          lg:pb-20
+        "
       >
         <div class="flex flex-col items-center w-full">
           <h1 class="header">Our Projects</h1>
@@ -151,7 +336,15 @@
           </div>
         </div>
         <div
-          class="flex flex-col lg:flex-row w-full text-black space-y-8 space-x-16 lg:container lg:mx-auto"
+          class="
+            flex flex-col
+            lg:flex-row
+            w-full
+            text-black
+            space-y-8 space-x-16
+            lg:container
+            lg:mx-auto
+          "
         >
           <div class="w-full lg:flex justify-center">
             <img src="../assets/images/projects.png" alt="" />
@@ -188,7 +381,15 @@
             </div>
           </div>
           <div
-            class="space-y-4 lg:lg:flex space-y-6 lg:space-y-0 space-x-0 lg:space-x-6 lg:grid lg:grid-cols-3"
+            class="
+              space-y-4
+              lg:lg:flex
+              space-y-6
+              lg:space-y-0
+              space-x-0
+              lg:space-x-6
+              lg:grid lg:grid-cols-3
+            "
           >
             <div class="border p-6 lg:px-8 lg:py-6 rounded-lg space-y-4 flex-1">
               <h1 class="table-head">Yollet Network</h1>
@@ -216,7 +417,14 @@
             </div>
           </div>
           <div
-            class="space-y-4 space-x-0 lg:space-x-6 lg:lg:flex space-y-6 lg:space-y-0 lg:space-x-0 lg:grid lg:grid-cols-3"
+            class="
+              space-y-4 space-x-0
+              lg:space-x-6
+              lg:lg:flex
+              space-y-6
+              lg:space-y-0 lg:space-x-0
+              lg:grid lg:grid-cols-3
+            "
           >
             <div class="border p-6 lg:px-8 lg:py-6 rounded-lg space-y-4">
               <h1 class="table-head">Yollet Payment</h1>
@@ -236,10 +444,20 @@
 
     <!-- FOOTER -->
     <footer
-      class="px-10 py-8 lg:py-16 lg:px-36 flex flex-col lg:flex-row lg:container lg:mx-auto lg:justify-between"
+      class="
+        px-10
+        py-8
+        lg:py-16
+        lg:px-36
+        flex flex-col
+        lg:flex-row
+        lg:container
+        lg:mx-auto
+        lg:justify-between
+      "
     >
       <div class="w-full lg:w-1/3 space-y-3 lg:space-y-4">
-        <img src="../assets/logos/footer-logo.png" alt="" />
+        <img src="../assets/logos/footer-logo-gray.png" alt="" />
         <p>Make radically better things</p>
         <div class="social-logos lg:space-x-6 space-x-4 text-2xl">
           <a href=""><i id="facebook" class="fab fa-facebook"></i></a>
@@ -318,7 +536,14 @@
 
     <!-- Footer2 -->
     <div
-      class="mx-8 lg:container lg:mx-auto border-t border-gray-200 flex-col items-center"
+      class="
+        mx-8
+        lg:container
+        lg:mx-auto
+        border-t border-gray-200
+        flex-col
+        items-center
+      "
     >
       <div class="flex justify-center py-8 mb-4">
         <div>

@@ -30,7 +30,13 @@
     <div class="bg-white sticky top-0 z-10 py-4">
       <div class="lg:px-10 lg:container lg:mx-auto">
         <div
-          class="text-gray-700 dark-mode:text-gray-200 dark-mode:bg-gray-800 px-4 sm:px-10 lg:px-20"
+          class="
+            text-gray-700
+            dark-mode:text-gray-200 dark-mode:bg-gray-800
+            px-4
+            sm:px-10
+            lg:px-20
+          "
         >
           <div
             x-data="{ open: false }"
@@ -39,11 +45,26 @@
             <div class="flex flex-row items-center justify-between">
               <a
                 href="./index.html"
-                class="text-lg font-semibold tracking-widest text-gray-900 rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline md:mr-4"
+                class="
+                  text-lg
+                  font-semibold
+                  tracking-widest
+                  text-gray-900
+                  rounded-lg
+                  dark-mode:text-white
+                  focus:outline-none
+                  focus:shadow-outline
+                  md:mr-4
+                "
                 ><img src="../assets/logos/Logo.png"
               /></a>
               <button
-                class="lg:hidden rounded-lg focus:outline-none focus:shadow-outline"
+                class="
+                  lg:hidden
+                  rounded-lg
+                  focus:outline-none
+                  focus:shadow-outline
+                "
                 @click="open = !open"
               >
                 <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
@@ -64,41 +85,192 @@
             </div>
             <nav
               :class="{'flex': open, 'hidden': !open}"
-              class="flex-col flex-grow pb-4 md:pb-0 hidden lg:flex lg:justify-end lg:flex-row font-bold"
+              class="
+                flex-col flex-grow
+                pb-4
+                md:pb-0
+                hidden
+                lg:flex
+                lg:justify-end
+                lg:flex-row
+                font-bold
+              "
             >
               <a
-                class="text-gray-900 bg-gray-200 px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                class="
+                  text-gray-900
+                  bg-gray-200
+                  px-4
+                  py-2
+                  mt-2
+                  text-sm
+                  font-semibold
+                  bg-transparent
+                  rounded-lg
+                  dark-mode:bg-transparent
+                  dark-mode:hover:bg-gray-600
+                  dark-mode:focus:bg-gray-600
+                  dark-mode:focus:text-white
+                  dark-mode:hover:text-white
+                  dark-mode:text-gray-200
+                  md:mt-0
+                  md:ml-4
+                  hover:bg-gray-200
+                  focus:bg-gray-200
+                  focus:outline-none
+                  focus:shadow-outline
+                "
                 href="./index.html"
                 >Home</a
               >
               <a
-                class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                class="
+                  px-4
+                  py-2
+                  mt-2
+                  text-sm
+                  font-semibold
+                  bg-transparent
+                  rounded-lg
+                  dark-mode:bg-transparent
+                  dark-mode:hover:bg-gray-600
+                  dark-mode:focus:bg-gray-600
+                  dark-mode:focus:text-white
+                  dark-mode:hover:text-white
+                  dark-mode:text-gray-200
+                  md:mt-0
+                  md:ml-4
+                  hover:bg-gray-200
+                  focus:bg-gray-200
+                  focus:outline-none
+                  focus:shadow-outline
+                "
                 href="./projects.html"
                 >Projects</a
               >
               <a
-                class="px-4 py-2 mt-2 text-sm font-semibold rounded-lg dark-mode:bg-gray-700 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                class="
+                  px-4
+                  py-2
+                  mt-2
+                  text-sm
+                  font-semibold
+                  rounded-lg
+                  dark-mode:bg-gray-700
+                  dark-mode:hover:bg-gray-600
+                  dark-mode:focus:bg-gray-600
+                  dark-mode:focus:text-white
+                  dark-mode:hover:text-white
+                  dark-mode:text-gray-200
+                  md:mt-0
+                  hover:bg-gray-200
+                  focus:bg-gray-200
+                  focus:outline-none
+                  focus:shadow-outline
+                "
                 href="./solutions.html"
                 >Solutions</a
               >
               <a
-                class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                class="
+                  px-4
+                  py-2
+                  mt-2
+                  text-sm
+                  font-semibold
+                  bg-transparent
+                  rounded-lg
+                  dark-mode:bg-transparent
+                  dark-mode:hover:bg-gray-600
+                  dark-mode:focus:bg-gray-600
+                  dark-mode:focus:text-white
+                  dark-mode:hover:text-white
+                  dark-mode:text-gray-200
+                  md:mt-0
+                  md:ml-4
+                  hover:bg-gray-200
+                  focus:bg-gray-200
+                  focus:outline-none
+                  focus:shadow-outline
+                "
                 href="#"
                 >Contact Us</a
               >
               <a
-                class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                class="
+                  px-4
+                  py-2
+                  mt-2
+                  text-sm
+                  font-semibold
+                  bg-transparent
+                  rounded-lg
+                  dark-mode:bg-transparent
+                  dark-mode:hover:bg-gray-600
+                  dark-mode:focus:bg-gray-600
+                  dark-mode:focus:text-white
+                  dark-mode:hover:text-white
+                  dark-mode:text-gray-200
+                  md:mt-0
+                  md:ml-4
+                  hover:bg-gray-200
+                  focus:bg-gray-200
+                  focus:outline-none
+                  focus:shadow-outline
+                "
                 href="http://www.yollet.net/doc/block-api-reference.html"
                 >Resource</a
               >
               <a
-                class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline text-orange"
+                class="
+                  px-4
+                  py-2
+                  mt-2
+                  text-sm
+                  font-semibold
+                  bg-transparent
+                  rounded-lg
+                  dark-mode:bg-transparent
+                  dark-mode:hover:bg-gray-600
+                  dark-mode:focus:bg-gray-600
+                  dark-mode:focus:text-white
+                  dark-mode:hover:text-white
+                  dark-mode:text-gray-200
+                  md:mt-0
+                  md:ml-4
+                  hover:bg-gray-200
+                  focus:bg-gray-200
+                  focus:outline-none
+                  focus:shadow-outline
+                  text-orange
+                "
                 href="https://yollet-scan.vercel.app/"
                 target="_blank"
                 >Yollet Scan</a
               >
               <a
-                class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline text-orange"
+                class="
+                  px-4
+                  py-2
+                  mt-2
+                  text-sm
+                  font-semibold
+                  bg-transparent
+                  rounded-lg
+                  dark-mode:bg-transparent
+                  dark-mode:hover:bg-gray-600
+                  dark-mode:focus:bg-gray-600
+                  dark-mode:focus:text-white
+                  dark-mode:hover:text-white
+                  dark-mode:text-gray-200
+                  md:mt-0
+                  md:ml-4
+                  hover:bg-gray-200
+                  focus:bg-gray-200
+                  focus:outline-none
+                  focus:shadow-outline
+                  text-orange
+                "
                 href="#"
                 >Yollet Service</a
               >
@@ -119,11 +291,29 @@
 
     <section
       id="home"
-      class="mt-16 md:flex relative lg:container lg:mx-auto lg:px-16 justify-between"
+      class="
+        mt-16
+        md:flex
+        relative
+        lg:container
+        lg:mx-auto
+        lg:px-16
+        justify-between
+      "
     >
       <div class="lg:space-y-8 overflow-y-auto px-4 lg:w-1/2 lg:mt-32">
         <h1
-          class="font-extrabold text-2xl lg:text-5xl lg:pl-12 lg:space-y-4 text-center lg:text-left h-full lg:leading-relaxed"
+          class="
+            font-extrabold
+            text-2xl
+            lg:text-5xl
+            lg:pl-12
+            lg:space-y-4
+            text-center
+            lg:text-left
+            h-full
+            lg:leading-relaxed
+          "
         >
           <div>가맹점과 소비자를 간편하게 연결하는 블록체인 솔루션</div>
         </h1>
@@ -155,7 +345,21 @@
     <!-- About -->
     <div class="about bg-right">
       <section
-        class="flex justify-center flex-col items-center py-12 lg:pt-28 lg:px-0 text-center container mx-auto px-0 text-white lg:pb-28"
+        class="
+          flex
+          justify-center
+          flex-col
+          items-center
+          py-12
+          lg:pt-28
+          lg:px-0
+          text-center
+          container
+          mx-auto
+          px-0
+          text-white
+          lg:pb-28
+        "
       >
         <div class="flex flex-col items-center w-full space-y-6 lg:space-y-8">
           <h1 class="page-header text-white">About Yollet</h1>
@@ -178,7 +382,19 @@
     <!-- BLockchain -->
     <div class="bg-yellow-50">
       <section
-        class="flex flex-col-reverse lg:flex lg:flex-row py-10 px-10 lg:px-32 lg:py-24 text-center lg:text-right items-center lg:container lg:mx-auto"
+        class="
+          flex flex-col-reverse
+          lg:flex lg:flex-row
+          py-10
+          px-10
+          lg:px-32
+          lg:py-24
+          text-center
+          lg:text-right
+          items-center
+          lg:container
+          lg:mx-auto
+        "
       >
         <div class="w-full lg:w-1/2 mt-8">
           <img src="../assets/images/blockchain.png" alt="" />
@@ -205,7 +421,19 @@
     <!-- Payment -->
     <div class="bg-blue-50">
       <section
-        class="flex flex-col lg:flex lg:flex-row pt-12 lg:pt-24 lg:pb-24 px-10 lg:px-32 lg:text-right items-center lg:container lg:mx-auto"
+        class="
+          flex flex-col
+          lg:flex lg:flex-row
+          pt-12
+          lg:pt-24
+          lg:pb-24
+          px-10
+          lg:px-32
+          lg:text-right
+          items-center
+          lg:container
+          lg:mx-auto
+        "
       >
         <div class="w-full lg:w-1/2 text-center lg:text-left space-y-4">
           <p class="page-head-p">Yollet Payment System</p>
@@ -246,7 +474,16 @@
     <!-- Partners -->
     <div class="flex flex-col items-center py-12 lg:py-24">
       <div
-        class="text-white text-center space-y-16 px-10 lg:px-28 py-2 flex flex-col items-center w-full"
+        class="
+          text-white text-center
+          space-y-16
+          px-10
+          lg:px-28
+          py-2
+          flex flex-col
+          items-center
+          w-full
+        "
       >
         <div class="flex flex-col items-center space-y-2">
           <div>
@@ -260,7 +497,14 @@
           </div>
         </div>
         <div
-          class="flex flex-col lg:flex-row w-full text-black space-y-8 lg:space-x-16"
+          class="
+            flex flex-col
+            lg:flex-row
+            w-full
+            text-black
+            space-y-8
+            lg:space-x-16
+          "
         >
           <div class="w-full flex justify-end">
             <img src="../assets/images/partners.png" alt="" />
@@ -290,7 +534,17 @@
     <!-- Service -->
     <div class="bg-gray-50">
       <section
-        class="flex px-10 flex-col items-center py-16 infra-section lg:container lg:mx-auto space-y-6"
+        class="
+          flex
+          px-10
+          flex-col
+          items-center
+          py-16
+          infra-section
+          lg:container
+          lg:mx-auto
+          space-y-6
+        "
       >
         <div class="text-center mb-6 space-y-4">
           <p class="page-head-p">Service</p>
@@ -427,7 +681,19 @@
     <div class="download-bg">
       <div class="flex flex-col items-center px-6 lg:px-80">
         <div
-          class="flex items-center justify-between flex-col text-center lg:text-left lg:flex-row py-10 lg:py-24 lg:container lg:mx-auto"
+          class="
+            flex
+            items-center
+            justify-between
+            flex-col
+            text-center
+            lg:text-left
+            lg:flex-row
+            py-10
+            lg:py-24
+            lg:container
+            lg:mx-auto
+          "
         >
           <div class="w-full lg:w-1/2 space-y-16 text-white">
             <div class="space-y-4">
@@ -447,7 +713,15 @@
             </div>
             <div class="space-y-4">
               <div
-                class="w-full lg:w-2/3 border border-white rounded-xl space-y-4 p-5 text-left"
+                class="
+                  w-full
+                  lg:w-2/3
+                  border border-white
+                  rounded-xl
+                  space-y-4
+                  p-5
+                  text-left
+                "
               >
                 <h1 class="contact-name">
                   <i class="fas fa-map-marker-alt mr-2"></i>Location
@@ -459,7 +733,15 @@
                 </p>
               </div>
               <div
-                class="w-full lg:w-2/3 border border-white rounded-xl space-y-4 p-5 text-left"
+                class="
+                  w-full
+                  lg:w-2/3
+                  border border-white
+                  rounded-xl
+                  space-y-4
+                  p-5
+                  text-left
+                "
               >
                 <h1 class="contact-name">
                   <i class="fas fa-phone-alt mr-2"></i>Tel
@@ -495,7 +777,15 @@
                   <div class="flex flex-col">
                     <label for="message">문의내용</label>
                     <textarea
-                      class="rounded h-28 border border-gray-200 whitespace-pre-line px-2 py-1 focus:outline-none"
+                      class="
+                        rounded
+                        h-28
+                        border border-gray-200
+                        whitespace-pre-line
+                        px-2
+                        py-1
+                        focus:outline-none
+                      "
                       name="message"
                       id="message"
                       required
@@ -503,7 +793,17 @@
                   </div>
                   <div class="flex items-center">
                     <button
-                      class="text-sm py-2 px-5 button-bg rounded-md mb-4 hover:bg-yellow-600 text-white lg:w-1/3"
+                      class="
+                        text-sm
+                        py-2
+                        px-5
+                        button-bg
+                        rounded-md
+                        mb-4
+                        hover:bg-yellow-600
+                        text-white
+                        lg:w-1/3
+                      "
                     >
                       메시지 보내기
                     </button>
@@ -521,7 +821,16 @@
     <!-- Brochure -->
     <div class="brochure">
       <section
-        class="flex flex-col items-center justify-center text-center py-16 lg:container lg:mx-auto lg:py-32"
+        class="
+          flex flex-col
+          items-center
+          justify-center
+          text-center
+          py-16
+          lg:container
+          lg:mx-auto
+          lg:py-32
+        "
       >
         <div class="mb-8 space-y-4">
           <p class="page-head-p-white">Company Profile</p>
@@ -531,7 +840,22 @@
           </p>
         </div>
         <button
-          class="text-yellow-500 border border-gray-300 p-2 lg:py-2 lg:px-5 rounded bg-white my-4 focus:outline-none focus:border-gray-400 text-xs lg:text-base font-bold hover:bg-gray-200"
+          class="
+            text-yellow-500
+            border border-gray-300
+            p-2
+            lg:py-2
+            lg:px-5
+            rounded
+            bg-white
+            my-4
+            focus:outline-none
+            focus:border-gray-400
+            text-xs
+            lg:text-base
+            font-bold
+            hover:bg-gray-200
+          "
         >
           <i class="fas fa-download pr-2"></i>Download Document
         </button>
@@ -541,10 +865,20 @@
 
     <!-- FOOTER -->
     <footer
-      class="px-10 py-8 lg:py-16 lg:px-36 flex flex-col lg:flex-row lg:container lg:mx-auto lg:justify-between"
+      class="
+        px-10
+        py-8
+        lg:py-16
+        lg:px-36
+        flex flex-col
+        lg:flex-row
+        lg:container
+        lg:mx-auto
+        lg:justify-between
+      "
     >
       <div class="w-full lg:w-1/3 space-y-3 lg:space-y-4">
-        <img src="../assets/logos/footer-logo.png" alt="" />
+        <img src="../assets/logos/footer-logo-gray.png" alt="" />
         <p>Make radically better things</p>
         <div class="social-logos lg:space-x-6 space-x-4 text-2xl">
           <a href=""><i id="facebook" class="fab fa-facebook"></i></a>
@@ -623,7 +957,14 @@
 
     <!-- Footer2 -->
     <div
-      class="mx-8 lg:container lg:mx-auto border-t border-gray-200 flex-col items-center"
+      class="
+        mx-8
+        lg:container
+        lg:mx-auto
+        border-t border-gray-200
+        flex-col
+        items-center
+      "
     >
       <div class="flex justify-center py-8 mb-4">
         <div>
