@@ -85,7 +85,7 @@ const getData = async (num) => {
   const data = await fetch(url);
   const res = await data.json();
 
-  console.log(typeof res);
+  console.log(res);
 
   total_pages.innerHTML = Math.floor(res.length / num) + 1;
 
