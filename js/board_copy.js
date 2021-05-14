@@ -101,7 +101,7 @@ const getDataSearch = async (search, num, search_type) => {
     var title = document.createElement("td");
     var link = document.createElement("a");
     title.appendChild(link);
-    link.href = `http://127.0.0.1:5500/pages/questions-read.html?${res[i].id}`;
+    link.href = `./questions-read.html?${res[i].id}`;
 
     var name = document.createElement("td");
     var date = document.createElement("td");
@@ -165,7 +165,7 @@ function tableCreator(limit) {
     var link = document.createElement("a");
     title.appendChild(link);
     // link.href = `http://localhost:1337/boards/${res[i].id}`;
-    link.href = `http://127.0.0.1:5500/pages/questions-read.html?${dataArray[i].id}`;
+    link.href = `./questions-read.html?${dataArray[i].id}`;
 
     var name = document.createElement("td");
     var date = document.createElement("td");

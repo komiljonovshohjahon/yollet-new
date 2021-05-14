@@ -14,7 +14,7 @@ var query = window.location.search;
 query = query.replace("?", "");
 
 edit.addEventListener("click", function () {
-  window.location.href = `http://127.0.0.1:5500/pages/password.html?edit/${query}`;
+  window.location.href = `./password.html?edit/${query}`;
 });
 
 const getData = async () => {
