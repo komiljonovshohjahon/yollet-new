@@ -20,7 +20,7 @@ $(() => {
     if (!sliced_query) {
       getData(formData.password).then((res) => {
         if (res) {
-          window.location.href = `http://127.0.0.1:5500/pages/questions-read.html?${
+          window.location.href = `./questions-read.html?${
             sliced_query ? sliced_query : query
           }`;
           localStorage.setItem("check", true);
@@ -32,7 +32,7 @@ $(() => {
     } else {
       getData(formData.password).then((res) => {
         if (res) {
-          window.location.href = `http://127.0.0.1:5500/pages/questions-write.html?${sliced_query}`;
+          window.location.href = `./questions-write.html?${sliced_query}`;
           localStorage.setItem("check", true);
         } else {
           incorrect.classList.remove("hidden");
