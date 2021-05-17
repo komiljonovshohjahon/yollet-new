@@ -51,7 +51,6 @@ const getData = async (password) => {
   const res = await data.json();
 
   if (password === res.password) {
-    console.log(password);
     return true;
   } else {
     return false;

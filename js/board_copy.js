@@ -20,22 +20,15 @@ var number = parseInt(items_number.value);
 var page_num = 0;
 var word;
 var page = parseInt(page_number.innerHTML);
-var total_page = getDataCount().then(
-  (res) => (total_pages.innerHTML = Math.round(res / 10))
-);
 
 search_input.addEventListener("change", function () {
   word = search_input.value;
-  console.log(word);
 });
 
 items_number.addEventListener("change", function () {
   number = items_number.value;
   page = 1;
   page_number.innerHTML = page;
-  total_pages.innerHTML = getDataCount().then(
-    (res) => (total_pages.innerHTML = Math.round(res / number))
-  );
   getData(number, search_type, word, 0);
 });
 
@@ -81,56 +74,6 @@ toggle_search.addEventListener("click", function () {
   }
 });
 
-const getDataSearch = async (search, num, search_type) => {
-  const url = `http://localhost:1337/boards/?${search_type}_contains=${search}&_sort=id:DESC`;
-  const data = await fetch(url);
-  const res = await data.json();
-  var element = document.getElementById("tbody");
-
-  total_pages.innerHTML = Math.round(res.length / num) + 1;
-
-  while (element.lastElementChild) {
-    element.removeChild(element.lastElementChild);
-  }
-
-  for (let i = 0; i < num; i++) {
-    var datee = new Date(res[i].created_at).toLocaleDateString();
-    var tr = document.createElement("tr");
-    var id = document.createElement("td");
-
-    var title = document.createElement("td");
-    var link = document.createElement("a");
-    title.appendChild(link);
-    link.href = `http://127.0.0.1:5500/pages/questions-read.html?${res[i].id}`;
-
-    var name = document.createElement("td");
-    var date = document.createElement("td");
-    var views = document.createElement("td");
-
-    var idNode = document.createTextNode(res[i].id);
-    var titleNode = document.createTextNode(res[i].title);
-    var nameNode = document.createTextNode(res[i].name);
-    var dateNode = document.createTextNode(datee);
-    var viewsNode = document.createTextNode(res[i].views);
-
-    id.appendChild(idNode);
-    link.appendChild(titleNode);
-    name.appendChild(nameNode);
-    date.appendChild(dateNode);
-    views.appendChild(viewsNode);
-
-    tr.appendChild(id);
-    tr.appendChild(title);
-    tr.appendChild(name);
-    tr.appendChild(date);
-    tr.appendChild(views);
-
-    element.appendChild(tr);
-
-    pageButtonChecker();
-  }
-};
-
 async function getData(limit, search_type, word, start) {
   var limit = parseInt(limit);
   var start = parseInt(start);
@@ -144,7 +87,9 @@ async function getData(limit, search_type, word, start) {
   const res = await data.json();
   dataArray = res;
 
-  total_page = dataArray.length;
+  total_pages.innerHTML;
+
+  getDataCount(search_type, word, start).then((a) => console.log(a.length));
 
   while (element.lastElementChild) {
     element.removeChild(element.lastElementChild);
@@ -211,14 +156,15 @@ function pageButtonChecker() {
   }
 }
 
+// window.onload = getDataCount().then(
+//   (res) => (total_pages.innerHTML = Math.round(res / 10))
+// );
 getData(number, false, false, page_num);
 
-window.onload = getDataCount().then(
-  (res) => (total_pages.innerHTML = Math.round(res / 10))
-);
-
-async function getDataCount(limit, search_type, word, start) {
-  const url = `http://localhost:1337/boards/count`;
+async function getDataCount(search_type, word, start) {
+  const url = `http://localhost:1337/boards/?${
+    word ? "&&" + search_type + "_contains=" + word : ""
+  }&&_start=${start}&&_sort=id:DESC`;
   const data = await fetch(url);
   const res = await data.json();
   return res;

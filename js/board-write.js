@@ -23,8 +23,6 @@ if (!query) {
       : checkbox.classList.remove("pressed");
   });
 
-  console.log(query);
-
   $(() => {
     const $form = $("form");
 
@@ -48,7 +46,7 @@ if (!query) {
         .done(function () {
           success.classList.remove("hidden");
           $(".form-container").get(0).reset();
-          console.log("succes");
+          window.location.replace("http://127.0.0.1:5500/pages/questions.html");
         })
         .fail(function () {
           console.log("error");
@@ -101,8 +99,10 @@ if (!query) {
           })
             .done(function () {
               success.classList.remove("hidden");
-              $(".form-container").get(0).reset();
               checkbox.classList.remove("pressed");
+              window.location.replace(
+                "http://127.0.0.1:5500/pages/questions.html"
+              );
             })
             .fail(function () {
               console.log("error");
