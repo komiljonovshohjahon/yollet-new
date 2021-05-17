@@ -89,7 +89,7 @@ async function getData(limit, search_type, word, start) {
 
   total_pages.innerHTML;
 
-  getDataCount(search_type, word, start).then((a) => console.log(a.length));
+  // getDataCount(search_type, word, start).then((a) => console.log(a.length));
 
   while (element.lastElementChild) {
     element.removeChild(element.lastElementChild);
@@ -110,7 +110,20 @@ function tableCreator(limit) {
     var link = document.createElement("a");
     title.appendChild(link);
     // link.href = `http://localhost:1337/boards/${res[i].id}`;
-    link.href = `http://127.0.0.1:5500/pages/questions-read.html?${dataArray[i].id}`;
+
+    // passCheck(dataArray[i].id).then((a) => {
+    //   if (a.private) {
+    //     link.href = `http://localhost:5500/pages/password.html?${dataArray[i].id}`;
+    //   } else {
+    //     link.href = `http://localhost:5500/pages/questions-read.html?${dataArray[i].id}`;
+    //   }
+    // });
+
+    if (dataArray[i].private) {
+      link.href = `http://localhost:5500/pages/password.html?${dataArray[i].id}`;
+    } else {
+      link.href = `http://localhost:5500/pages/questions-read.html?${dataArray[i].id}`;
+    }
 
     var name = document.createElement("td");
     var date = document.createElement("td");
@@ -169,3 +182,11 @@ async function getDataCount(search_type, word, start) {
   const res = await data.json();
   return res;
 }
+
+const passCheck = async (id) => {
+  const url = `http://localhost:1337/boards/${id}`;
+  const data = await fetch(url);
+  const res = await data.json();
+
+  return res;
+};
