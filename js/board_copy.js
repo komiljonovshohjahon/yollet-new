@@ -11,6 +11,7 @@ const toggle_search = document.querySelector("#search-toggle");
 const search_section = document.querySelector("#search-section");
 const write = document.querySelector("#write");
 var element = document.getElementById("tbody");
+var element_sm = document.getElementById("tbody-sm");
 
 var dataArray = [];
 
@@ -89,10 +90,11 @@ async function getData(limit, search_type, word, start) {
 
   total_pages.innerHTML;
 
-  // getDataCount(search_type, word, start).then((a) => console.log(a.length));
-
   while (element.lastElementChild) {
     element.removeChild(element.lastElementChild);
+  }
+  while (element_sm.lastElementChild) {
+    element_sm.removeChild(element_sm.lastElementChild);
   }
 
   tableCreator(limit);
@@ -100,24 +102,58 @@ async function getData(limit, search_type, word, start) {
 
 function tableCreator(limit) {
   for (let i = 0; i < limit; i++) {
+    var datee_sm = new Date(dataArray[i].created_at).toLocaleDateString();
+    var div = document.createElement("div");
+    var title_sm = document.createElement("h1");
+    var link_sm = document.createElement("a");
+    title_sm.appendChild(link_sm);
+
+    if (dataArray[i].private) {
+      link_sm.href = `http://localhost:5500/pages/password.html?${dataArray[i].id}`;
+    } else {
+      link_sm.href = `http://localhost:5500/pages/questions-read.html?${dataArray[i].id}`;
+    }
+
+    var name_sm = document.createElement("label");
+    name_sm.classList.add("name_sm");
+
+    var date_sm = document.createElement("label");
+    date_sm.classList.add("date_sm");
+
+    var views_sm = document.createElement("label");
+    views_sm.classList.add("views_sm");
+
+    var titleNode_sm = document.createTextNode(dataArray[i].title);
+    var nameNode_sm = document.createTextNode(dataArray[i].name);
+    var dateNode_sm = document.createTextNode(datee_sm);
+    var viewsNode_sm = document.createTextNode(dataArray[i].views);
+
+    title_sm.appendChild(titleNode_sm);
+    name_sm.appendChild(nameNode_sm);
+    date_sm.appendChild(dateNode_sm);
+    views_sm.appendChild(viewsNode_sm);
+
+    div.appendChild(title_sm);
+    div.appendChild(name_sm);
+    div.appendChild(date_sm);
+    div.appendChild(views_sm);
+
+    element_sm.appendChild(div);
+  }
+
+  for (let i = 0; i < limit; i++) {
     var datee = new Date(dataArray[i].created_at).toLocaleDateString();
+
+    // Mobile view table
 
     var tr = document.createElement("tr");
 
     var id = document.createElement("td");
 
     var title = document.createElement("td");
+
     var link = document.createElement("a");
     title.appendChild(link);
-    // link.href = `http://localhost:1337/boards/${res[i].id}`;
-
-    // passCheck(dataArray[i].id).then((a) => {
-    //   if (a.private) {
-    //     link.href = `http://localhost:5500/pages/password.html?${dataArray[i].id}`;
-    //   } else {
-    //     link.href = `http://localhost:5500/pages/questions-read.html?${dataArray[i].id}`;
-    //   }
-    // });
 
     if (dataArray[i].private) {
       link.href = `http://localhost:5500/pages/password.html?${dataArray[i].id}`;

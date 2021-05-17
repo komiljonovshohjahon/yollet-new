@@ -157,6 +157,27 @@ table tbody tr td:last-child {
   background-color: #e5e7eb;
 }
 
+#tbody-sm div {
+  padding: 10px;
+  border-top: 1px solid rgb(235, 235, 235);
+}
+
+#tbody-sm label {
+  color: gray;
+}
+
+.name_sm::after {
+  content: "\2022";
+  margin: 0px 8px;
+}
+.date_sm::after {
+  content: "\2022";
+  margin: 0px 8px;
+}
+.views_sm::before {
+  content: "조회수 ";
+}
+
 #facebook:hover {
   color: #3b5998;
 }
