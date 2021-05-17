@@ -13,9 +13,7 @@ const getDataa = async () => {
       await fetch(`http://localhost:1337/boards/${query}/counter`);
       localStorage.clear();
     } else {
-      window.location.replace(
-        `./password.html?${query}`
-      );
+      window.location.replace(`./password.html?${query}`);
     }
   }
 };

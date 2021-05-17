@@ -18,7 +18,7 @@ edit.addEventListener("click", function () {
 });
 
 const getData = async () => {
-  const url = `http://localhost:1337/boards/${query}`;
+  const url = `http://localhost:1337/boards/${query}/counter`;
   const data = await fetch(url);
   const res = await data.json();
 
