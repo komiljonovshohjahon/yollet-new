@@ -84,7 +84,7 @@ async function getData(limit, search_type, word, start) {
   var search_type = search_type;
   var word = word;
 
-  const url = `http://localhost:1337/boards/?_limit=${limit}${
+  const url = api_url + `boards/?_limit=${limit}${
     word ? "&&" + search_type + "_contains=" + word : ""
   }&&_start=${start}&&_sort=id:DESC`;
   const data = await fetch(url);
@@ -121,9 +121,9 @@ function tableCreator(limit) {
     title.appendChild(link);
 
     if (i.private) {
-      link.href = `http://localhost:5500/pages/password.html?${i.id}`;
+      link.href = `./password.html?${i.id}`;
     } else {
-      link.href = `http://localhost:5500/pages/questions-read.html?${i.id}`;
+      link.href = `./questions-read.html?${i.id}`;
     }
 
     var name = document.createElement("td");
@@ -161,9 +161,9 @@ function tableCreator(limit) {
     title_sm.appendChild(link_sm);
 
     if (i.private) {
-      link_sm.href = `http://localhost:5500/pages/password.html?${i.id}`;
+      link_sm.href = `./password.html?${i.id}`;
     } else {
-      link_sm.href = `http://localhost:5500/pages/questions-read.html?${i.id}`;
+      link_sm.href = `./questions-read.html?${i.id}`;
     }
 
     var name_sm = document.createElement("label");
@@ -215,7 +215,7 @@ function pageButtonChecker() {
 getData(number, false, false, page_num);
 
 async function getDataCount(search_type, word) {
-  const url = `http://localhost:1337/boards/?${
+  const url = api_url + `boards/?${
     word ? "&&" + search_type + "_contains=" + word : ""
   }&&_start=0&&_sort=id:DESC`;
   const data = await fetch(url);

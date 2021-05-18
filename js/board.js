@@ -81,7 +81,7 @@ toggle_search.addEventListener("click", function () {
 });
 
 const getData = async (num) => {
-  const url = `http://localhost:1337/boards/?_limit=${num}&&_sort=id:DESC`;
+  const url = api_url + `boards/?_limit=${num}&&_sort=id:DESC`;
   const data = await fetch(url);
   const res = await data.json();
 
@@ -105,7 +105,7 @@ const getData = async (num) => {
     var title = document.createElement("td");
     var link = document.createElement("a");
     title.appendChild(link);
-    // link.href = `http://localhost:1337/boards/${res[i].id}`;
+    // link.href = api_url + `boards/${res[i].id}`;
     link.href = `./questions-read.html?${res[i].id}`;
 
     var name = document.createElement("td");
@@ -136,7 +136,7 @@ const getData = async (num) => {
 };
 
 const getDataSelect = async (num) => {
-  const url = `http://localhost:1337/boards?_sort=id:DESC`;
+  const url = api_url + `boards?_sort=id:DESC`;
   const data = await fetch(url);
   const res = await data.json();
 
@@ -193,7 +193,7 @@ const getDataSelect = async (num) => {
 };
 
 const getDataSearch = async (search, num, search_type) => {
-  const url = `http://localhost:1337/boards/?${search_type}_contains=${search}&_sort=id:DESC`;
+  const url = api_url + `boards/?${search_type}_contains=${search}&_sort=id:DESC`;
   const data = await fetch(url);
   const res = await data.json();
   var element = document.getElementById("tbody");
@@ -244,7 +244,7 @@ const getDataSearch = async (search, num, search_type) => {
 };
 
 const getDataPaging = async (start, num) => {
-  const url = `http://localhost:1337/boards/?_start=${start}&_limit=${num}&_sort=id:DESC`;
+  const url = api_url + `boards/?_start=${start}&_limit=${num}&_sort=id:DESC`;
   const data = await fetch(url);
   const res = await data.json();
 

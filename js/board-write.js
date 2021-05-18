@@ -7,7 +7,7 @@ var query = window.location.search;
 query = query.replace("?", "");
 
 const getData = async () => {
-  const url = `http://localhost:1337/boards/${query}`;
+  const url = api_url + `boards/${query}`;
   const data = await fetch(url);
   const res = await data.json();
 
@@ -46,7 +46,7 @@ if (!query) {
         .done(function () {
           success.classList.remove("hidden");
           $(".form-container").get(0).reset();
-          window.location.replace("http://localhost:5500/pages/questions.html");
+          window.location.replace("./questions.html");
         })
         .fail(function () {
           console.log("error");
@@ -94,14 +94,14 @@ if (!query) {
 
           $.ajax({
             type: "PUT",
-            url: `http://localhost:1337/boards/${query}`,
+            url: api_url + `boards/${query}`,
             data: formData,
           })
             .done(function () {
               success.classList.remove("hidden");
               checkbox.classList.remove("pressed");
               window.location.replace(
-                "http://localhost:5500/pages/questions.html"
+                "./questions.html"
               );
             })
             .fail(function () {

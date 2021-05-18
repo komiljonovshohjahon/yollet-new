@@ -44,7 +44,7 @@ $(() => {
 });
 
 const getData = async (password) => {
-  const url = `http://localhost:1337/boards/${
+  const url = api_url + `boards/${
     sliced_query ? sliced_query : query
   }`;
   const data = await fetch(url);
