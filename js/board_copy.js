@@ -84,9 +84,11 @@ async function getData(limit, search_type, word, start) {
   var search_type = search_type;
   var word = word;
 
-  const url = api_url + `boards/?_limit=${limit}${
-    word ? "&&" + search_type + "_contains=" + word : ""
-  }&&_start=${start}&&_sort=id:DESC`;
+  const url =
+    api_url +
+    `boards/?_limit=${limit}${
+      word ? "&&" + search_type + "_contains=" + word : ""
+    }&&_start=${start}&&_sort=id:DESC`;
   const data = await fetch(url);
   const res = await data.json();
   dataArray = res;
@@ -98,16 +100,15 @@ async function getData(limit, search_type, word, start) {
     element_sm.removeChild(element_sm.lastElementChild);
   }
 
-  getDataCount(search_type, word, start).then((counts) => {
-    total_pages.innerHTML = Math.ceil(counts.length / limit);
-  });
+  // getDataCount(search_type, word, start).then((counts) => {
+  //   total_pages.innerHTML = Math.ceil(counts.length / limit);
+  // });
 
-  tableCreator(limit);
+  tableCreator();
 }
 
-function tableCreator(limit) {
+function tableCreator() {
   // Large view table
-
   dataArray.map((i) => {
     var datee = new Date(i.created_at).toLocaleDateString();
 
@@ -152,7 +153,6 @@ function tableCreator(limit) {
   });
 
   // Mobile view table
-
   dataArray.map((i) => {
     var datee_sm = new Date(i.created_at).toLocaleDateString();
     var div = document.createElement("div");
@@ -214,12 +214,14 @@ function pageButtonChecker() {
 
 getData(number, false, false, page_num);
 
-async function getDataCount(search_type, word) {
-  const url = api_url + `boards/?${
-    word ? "&&" + search_type + "_contains=" + word : ""
-  }&&_start=0&&_sort=id:DESC`;
-  const data = await fetch(url);
-  const res = await data.json();
-  console.log(res);
-  return res;
-}
+// async function getDataCount(search_type, word) {
+//   const url =
+//     api_url +
+//     `boards/?${
+//       word ? "&&" + search_type + "_contains=" + word : ""
+//     }&&_start=0&&_sort=id:DESC`;
+//   const data = await fetch(url);
+//   const res = await data.json();
+//   console.log(res);
+//   return res;
+// }

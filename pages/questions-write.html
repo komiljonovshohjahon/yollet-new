@@ -100,42 +100,22 @@
                 font-bold
               "
             >
-            <a
-            class="menu-enable"
-            href="./index.html"
-            >Home</a
-          >
-          <a
-            class="menu-enable"
-            href="./projects.html"
-            >Projects</a
-          >
-          <a
-            class="menu-enable"
-            href="./solutions.html"
-            >Solutions</a
-          >
-          <a
-            class="menu-selected"
-            href="./questions.html"
-            >Q&A</a
-          >
-          <a
-            class="menu-enable"
-            href="http://www.yollet.net/doc/block-api-reference.html"
-            >Resource</a
-          >
-          <a
-            class="menu-enable text-orange"
-            href="https://yollet-scan.vercel.app/"
-            target="_blank"
-            >Yollet Scan</a
-          >
-          <a
-            class="menu-disable"
-            href="#"
-            >Partners Service</a
-          >
+              <a class="menu-enable" href="./index.html">Home</a>
+              <a class="menu-enable" href="./projects.html">Projects</a>
+              <a class="menu-enable" href="./solutions.html">Solutions</a>
+              <a class="menu-selected" href="./questions.html">Q&A</a>
+              <a
+                class="menu-enable"
+                href="http://www.yollet.net/doc/block-api-reference.html"
+                >Resource</a
+              >
+              <a
+                class="menu-enable text-orange"
+                href="https://yollet-scan.vercel.app/"
+                target="_blank"
+                >Yollet Scan</a
+              >
+              <a class="menu-disable" href="#">Partners Service</a>
               <div
                 @click.away="open = false"
                 class="relative"
@@ -149,7 +129,6 @@
 
     <!-- NAVBAR -->
 
-    
     <!-- Home -->
     <div class="bg-gray-600 bg-right pt-12 lg:pt-0">
       <section
@@ -174,7 +153,8 @@
           <h1 class="header">Q&A</h1>
           <p class="paragraph px-0 lg:w-3/5 text-left lg:text-center">
             고객님의 소중한 의견에 항상 귀 기울이고 있습니다.<br />
-            궁금하신 점이나 의견을 남겨주시면 최대한 신속하고 자세히 답변해 드리겠습니다.
+            궁금하신 점이나 의견을 남겨주시면 최대한 신속하고 자세히 답변해
+            드리겠습니다.
           </p>
         </div>
       </section>
@@ -205,7 +185,7 @@
 
     <!-- Questions table -->
 
-    <div class="mx-8 lg:mx-40 pt-12 pb-24">
+    <div class="mx-8 pt-12 pb-24">
       <form
         method="POST"
         class="
@@ -215,7 +195,8 @@
           lg:space-y-2
           lg:text-sm
           form-container
-          lg:px-72
+          sm:mx-0
+          md:mx-56
         "
       >
         <div class="w-full lg:space-x-8 space-y-2 lg:space-y-0 lg:flex">
@@ -421,6 +402,7 @@
         </div>
       </div>
     </div>
+
     <!-- Footer2 -->
   </body>
 

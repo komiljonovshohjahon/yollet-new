@@ -17,9 +17,18 @@ $(() => {
       return acc;
     }, {});
 
+    const getData = async (password) => {
+      const url =
+        api_url + `boards/${sliced_query ? sliced_query : query}/passChecker`;
+      const data = await fetch(url, { method: "post", body: password });
+      const res = await data.json();
+
+      return res;
+    };
+
     if (!sliced_query) {
-      getData(formData.password).then((res) => {
-        if (res) {
+      getData(formData.password).then((result) => {
+        if (result) {
           window.location.href = `./questions-read.html?${
             sliced_query ? sliced_query : query
           }`;
@@ -30,8 +39,8 @@ $(() => {
         }
       });
     } else {
-      getData(formData.password).then((res) => {
-        if (res) {
+      getData(formData.password).then((result) => {
+        if (result) {
           window.location.href = `./questions-write.html?${sliced_query}`;
           localStorage.setItem("check", true);
         } else {
@@ -40,19 +49,42 @@ $(() => {
         }
       });
     }
+
+    // if (!sliced_query) {
+    //   getData(formData.password).then((res) => {
+    //     if (res) {
+    //       window.location.href = `./questions-read.html?${
+    //         sliced_query ? sliced_query : query
+    //       }`;
+    //       localStorage.setItem("check", true);
+    //     } else {
+    //       incorrect.classList.remove("hidden");
+    //       incorrect.classList.add("flex");
+    //     }
+    //   });
+    // } else {
+    //   getData(formData.password).then((res) => {
+    //     if (res) {
+    //       window.location.href = `./questions-write.html?${sliced_query}`;
+    //       localStorage.setItem("check", true);
+    //     } else {
+    //       incorrect.classList.remove("hidden");
+    //       incorrect.classList.add("flex");
+    //     }
+    //   });
+    // }
   });
 });
 
-const getData = async (password) => {
-  const url = api_url + `boards/${
-    sliced_query ? sliced_query : query
-  }`;
-  const data = await fetch(url);
-  const res = await data.json();
+// const getData = async (password) => {
+//   const url =
+//     api_url + `boards/${sliced_query ? sliced_query : query}/passChecker`;
+//   const data = await fetch(url);
+//   const res = await data.json();
 
-  if (password === res.password) {
-    return true;
-  } else {
-    return false;
-  }
-};
+//   if (password === res.password_enc) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// };

@@ -6,6 +6,8 @@ success.classList.add("hidden");
 var query = window.location.search;
 query = query.replace("?", "");
 
+console.log(query);
+
 const getData = async () => {
   const url = api_url + `boards/${query}`;
   const data = await fetch(url);
@@ -58,7 +60,6 @@ if (!query) {
     if (localStorage.getItem("check")) {
       localStorage.clear();
       form.name.value = res.name;
-      form.password.value = res.password;
       form.email.value = res.email;
       form.number.value = res.number;
       form.title.value = res.title;
@@ -100,9 +101,7 @@ if (!query) {
             .done(function () {
               success.classList.remove("hidden");
               checkbox.classList.remove("pressed");
-              window.location.replace(
-                "./questions.html"
-              );
+              window.location.replace("./questions.html");
             })
             .fail(function () {
               console.log("error");
