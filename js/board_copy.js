@@ -9,7 +9,6 @@ const next_button = document.querySelector("#next");
 const previous_button = document.querySelector("#previous");
 const toggle_search = document.querySelector("#search-toggle");
 const search_section = document.querySelector("#search-section");
-const write = document.querySelector("#write");
 var element = document.getElementById("tbody");
 var element_sm = document.getElementById("tbody-sm");
 
@@ -21,6 +20,8 @@ var number = parseInt(items_number.value);
 var page_num = 0;
 var word;
 var page = parseInt(page_number.innerHTML);
+
+//DOCUMENT DECLARATIONS
 
 search_input.addEventListener("change", function () {
   word = search_input.value;
@@ -38,8 +39,7 @@ next_button.addEventListener("click", function () {
   page_number.innerHTML = page;
   page_num += parseInt(number);
   getData(number, search_type, word, page_num);
-
-  // pageButtonChecker();
+  pageButtonChecker();
 });
 
 previous_button.addEventListener("click", function () {
@@ -47,8 +47,7 @@ previous_button.addEventListener("click", function () {
   page_number.innerHTML = page;
   page_num -= parseInt(number);
   getData(number, search_type, word, page_num);
-
-  // pageButtonChecker();
+  pageButtonChecker();
 });
 
 search_select.addEventListener("change", function () {
@@ -68,15 +67,13 @@ toggle_search.addEventListener("click", function () {
   if (toggle) {
     search_section.classList.remove("hidden");
     search_section.classList.add("flex");
-    write.classList.remove("hidden");
-    write.classList.add("flex");
   } else {
     search_section.classList.remove("flex");
     search_section.classList.add("hidden");
-    write.classList.remove("flex");
-    write.classList.add("hidden");
   }
 });
+
+// FUNCTIONS DECLARATIONS
 
 async function getData(limit, search_type, word, start) {
   var limit = parseInt(limit);
@@ -100,11 +97,28 @@ async function getData(limit, search_type, word, start) {
     element_sm.removeChild(element_sm.lastElementChild);
   }
 
-  // getDataCount(search_type, word, start).then((counts) => {
-  //   total_pages.innerHTML = Math.ceil(counts.length / limit);
-  // });
+  getDataCount(word).then((res) => (total_pages.innerHTML = res));
 
   tableCreator();
+}
+
+async function getDataCount(word) {
+  var url;
+  if (word != undefined) {
+    url =
+      api_url +
+      "boards/count" +
+      `${word.length > 0 && !undefined ? "?_q=" + word : ""}`;
+  } else {
+    url = api_url + "boards/count";
+  }
+
+  const data = await fetch(url);
+  const res = await data.json();
+
+  const api_total = Math.ceil(res / number);
+
+  return api_total;
 }
 
 function tableCreator() {
@@ -156,7 +170,7 @@ function tableCreator() {
   dataArray.map((i) => {
     var datee_sm = new Date(i.created_at).toLocaleDateString();
     var div = document.createElement("div");
-    var title_sm = document.createElement("h1");
+    var title_sm = document.createElement("td");
     var link_sm = document.createElement("a");
     title_sm.appendChild(link_sm);
 
@@ -180,7 +194,7 @@ function tableCreator() {
     var dateNode_sm = document.createTextNode(datee_sm);
     var viewsNode_sm = document.createTextNode(i.views);
 
-    title_sm.appendChild(titleNode_sm);
+    link_sm.appendChild(titleNode_sm);
     name_sm.appendChild(nameNode_sm);
     date_sm.appendChild(dateNode_sm);
     views_sm.appendChild(viewsNode_sm);
@@ -194,34 +208,44 @@ function tableCreator() {
   });
 }
 
-function pageButtonChecker() {
-  if (page < 2) {
-    previous_button.disabled = true;
-    previous_button.style.cursor = "not-allowed";
+function docReady(fn) {
+  // see if DOM is already available
+  if (
+    document.readyState === "complete" ||
+    document.readyState === "interactive"
+  ) {
+    // call on next available tick
+    setTimeout(fn, 1);
   } else {
-    previous_button.disabled = false;
-    previous_button.style.cursor = "pointer";
-  }
-
-  if (page > total_pages - 1) {
-    next_button.disabled = true;
-    next_button.style.cursor = "not-allowed";
-  } else {
-    next_button.disabled = false;
-    next_button.style.cursor = "pointer";
+    document.addEventListener("DOMContentLoaded", fn);
   }
 }
 
-getData(number, false, false, page_num);
+function pageButtonChecker() {
+  if (page < 2) {
+    previous_button.disabled = true;
+    previous_button.classList.add("cursor-not-allowed");
+  } else {
+    previous_button.disabled = false;
+    previous_button.classList.remove("cursor-not-allowed");
+  }
 
-// async function getDataCount(search_type, word) {
-//   const url =
-//     api_url +
-//     `boards/?${
-//       word ? "&&" + search_type + "_contains=" + word : ""
-//     }&&_start=0&&_sort=id:DESC`;
-//   const data = await fetch(url);
-//   const res = await data.json();
-//   console.log(res);
-//   return res;
-// }
+  if (page > total_pages.innerHTML - 1) {
+    next_button.disabled = true;
+    next_button.classList.add("cursor-not-allowed");
+  } else {
+    next_button.disabled = false;
+    next_button.classList.remove("cursor-not-allowed");
+  }
+}
+
+// FUNCTION CALLS
+
+docReady(function () {
+  getDataCount().then((res) => (total_pages.innerHTML = res));
+
+  previous_button.disabled = true;
+  previous_button.classList.add("cursor-not-allowed");
+});
+
+getData(number, false, false, page_num);

@@ -8,7 +8,7 @@
 }
 .menu-disable {
   @apply px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 text-gray-400 focus:outline-none focus:ring;
-} 
+}
 .menu-enable {
   @apply px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:ring;
 }
@@ -21,7 +21,7 @@
 }
 
 .page-paragraph {
-  @apply text-base text-left leading-relaxed lg:text-lg font-medium tracking-wide lg:tracking-normal lg:leading-normal lg:mt-6  font-nanum;
+  @apply text-base text-left leading-relaxed lg:text-lg font-medium tracking-wide lg:tracking-normal lg:leading-normal lg:mt-6 font-nanum;
 }
 
 .page-head-p {
